@@ -1,9 +1,11 @@
 import { Injectable }     from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { JwtHelper }      from 'angular2-jwt';
+import { JwtHelperService } from "@auth0/angular-jwt";
 
 import { LoggerService } from './logger.service';
 import { CommonService } from './common.service';
+ 
+const jwtHelper = new JwtHelperService();
 
 
 @Injectable()
@@ -53,7 +55,6 @@ export class AuthService {
 
      isLoggedIn(): boolean
      {
-         let jwtHelper = new JwtHelper();
          let token = localStorage.getItem('id_token');
 
          if( !token )
@@ -69,7 +70,6 @@ export class AuthService {
 
      isAllowed(requiredRole:string, requiredPermission?: string): boolean
      {
-        let jwtHelper = new JwtHelper();
         let token = localStorage.getItem('id_token');
         let allowed: boolean = false;
 
@@ -102,7 +102,7 @@ export class AuthService {
 
         if( !token )
            return null;
-        return new JwtHelper().decodeToken(token);
+        return jwtHelper.decodeToken(token);
      }
 
      /**
