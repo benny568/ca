@@ -4,8 +4,6 @@ import { RequestOptionsArgs,
          RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 
-import 'rxjs/add/operator/map';
-
 import { LoggerService } from './logger.service';
 import { CommonService } from './common.service';
 //import { ToolBox } from '../utilities/toolbox';
