@@ -4,7 +4,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 import { throwError } from 'rxjs';
 
-import { LoggerService, LogType } from '../services/logger.service';
+import { LoggerService, LogType } from '@src/app/services/logger.service';
 
 @Injectable()
 export class ErrorService {

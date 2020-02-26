@@ -19,5 +19,6 @@ export class AppComponent {
     
     constructor( private lg$    : LoggerService,
                  private com$   : CommonService,
-                 public auth$   : AuthService ) {}
+                 public auth$   : AuthService,
+                 public  user$  : UserService ) {}
 }

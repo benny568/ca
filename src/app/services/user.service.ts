@@ -7,10 +7,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { User }          from '../model/site-user';
-import { LoggerService } from '../services/logger.service';
-import { CommonService } from '../services/common.service';
-import { ErrorService }  from '../services/error.service';
+import { User }          from '@src/app/model/site-user';
+import { LoggerService } from '@src/app/services/logger.service';
+import { CommonService } from '@src/app/services/common.service';
+import { ErrorService }  from '@src/app/services/error.service';
 
 @Injectable()
 export class UserService {
