@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { LoggerService } from '@src/app//services/logger.service';
 import { CommonService } from '@src/app//services/common.service';
@@ -19,6 +21,16 @@ export class AppComponent {
     
     constructor( private lg$    : LoggerService,
                  private com$   : CommonService,
+                 public  d$     : SessionDataService,
                  public auth$   : AuthService,
-                 public  user$  : UserService ) {}
+                 public  user$  : UserService,
+                 public  cookie$: CookieService,
+                 private router : Router,
+                 private _http  : HttpClient ) 
+        {
+        this.lg$.setLogHdr(this.logdepth, this.componentName);
+    
+        // Load the teams to use in the menu system
+        this.d$.dsGetTeams();
+    }
 }

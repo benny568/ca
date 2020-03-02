@@ -28,8 +28,7 @@ import { CookieService } from '@src/app/services/cookie.service';
   imports: [
     NativeScriptModule,
     AppRoutingModule,
-    NativeScriptHttpClientModule
-
+    NativeScriptHttpClientModule,
   ],
   providers: [
     AuthService,
