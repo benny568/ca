@@ -1,5 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<ActionBar [title]="title"></ActionBar>
-<StackLayout  class="p-20">
-    <Label text="Welcome to my {{ title }}!" class="h1 text-center" textWrap="true"></Label>
-</StackLayout>
+<ActionBar title="" class="action-bar">
+    <GridLayout columns="*" width="100%">        
+        <Label col="0" text="Avenue United FC" class="text-center"></Label>
+        <Label col="0" text="&#xf0c9;" textWrap="true" (tap)="toggleDrawer()" class="fa-solid drawer-icon text-left"></Label>   
+    </GridLayout>
+</ActionBar>
+<div class="component">
+    <!--<advert></advert>-->
+    <news></news>
+    <!-- <facebook-feed></facebook-feed>
+    <sponsors></sponsors>
+    <visitor-count></visitor-count> -->
+    <!-- <cookie-consent-banner></cookie-consent-banner> -->
+  </div>
