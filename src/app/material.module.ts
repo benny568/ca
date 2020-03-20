@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
+
 
 //import { DatepickerLocale, APP_DATE_FORMATS } from './date-picker/datepicker-local.component';
 
 @NgModule({
     imports: [
+        MatMenuModule,
         MatTooltipModule,
         MatPaginatorModule,
         MatTableModule,
         MatSnackBarModule,
-        MatDatepickerModule
+        MatDatepickerModule,
+        MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule
     ],
     exports: [
-        MatTooltipModule
+        MatMenuModule,
+        MatTooltipModule,
+        MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule
     ],
     providers: [
         // {

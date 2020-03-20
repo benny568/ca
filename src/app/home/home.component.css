@@ -1,4 +1,4 @@
-.action-bar {
-    background-color: red;
-    color: yellow;
-}
+ActionBar { background-color: red; }
+ActionBar Label { font-size: 30em; font-weight: 900; }
+
+.bigText { font-size: 30em;}

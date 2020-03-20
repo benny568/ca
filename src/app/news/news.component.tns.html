@@ -1,0 +1,9 @@
+<ListView [items] = "news$.NewsStories" class="list-group">
+    <ng-template let-item="item"> <!--(itemTap)="onItemTap($event)"> -->
+        <StackLayout class="list-group-item">
+            <Label [text]="item.title"></Label>
+            <Label [text]="item.description"></Label>
+            <Label [text]="item.story"></Label>
+        </StackLayout>
+    </ng-template>
+</ListView>

@@ -327,8 +327,8 @@ export class SessionDataService {
 
 
         // Clear out the TeamMembers array first
-                                            this.dsCurrentTeam = null;
-                                        var url                = this.com$.getHome();
+        this.dsCurrentTeam = null;
+        var url            = this.com$.getHome();
 
         this.http$.get( url + 'public/team/' + teamName )
              .subscribe( (data: Team) => this.dsCurrentTeam = data,
@@ -411,7 +411,7 @@ export class SessionDataService {
 
         if( this.dsTeamMembers[teamId] !== undefined )
             this.dsTeamMembers[teamId].length = 0;
-            var                url            = this.com$.getHome();
+        var url = this.com$.getHome();
 
        return this.http$.get( url + 'public/teammembers/' + teamName );
     }

@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { CommonService } from './common.service';
 import { LoggerService } from './logger.service';
 import { NewsStory } from '../model/news-story';
-import { from } from 'rxjs';
 
 @Injectable()
 export class NewsService {
@@ -47,7 +46,9 @@ export class NewsService {
      public setNews( data: [NewsStory] )
     {
     	this.lg$.log('->' + 'setNews()...recieved news stories');
-    	this.NewsStories = data;
+        this.NewsStories = data;
+        this.currentStory = this.NewsStories[0];
+        this.lg$.log('<- setNews(): set current story to: ' + this.currentStory.title);
     }
 
 }
