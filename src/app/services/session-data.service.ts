@@ -48,21 +48,21 @@ export class SessionDataService {
         this.loghdr = this.setLogHdr(this.logdepth, this.serviceName);
 
         var svr                    = new ServerMode();
-            this.CurrentServerMode = svr.getServerMode();
-            this.dsAuthenticated   = false;
-            this.dsPosition        = [  'Manager',
-                                        'Goalkeeper',
-                                        'Full Back',
-                                        'Center Half',
-                                        'Mid Field',
-                                        'CAM',
-                                        'Winger',
-                                        'Striker',
-                                        'Chairman',
-                                        'Secretary',
-                                        'Treasurer',
-                                        'PRO',
-                                        'Committee'];
+        this.CurrentServerMode = svr.getServerMode();
+        this.dsAuthenticated   = false;
+        this.dsPosition        = [  'Manager',
+                                    'Goalkeeper',
+                                    'Full Back',
+                                    'Center Half',
+                                    'Mid Field',
+                                    'CAM',
+                                    'Winger',
+                                    'Striker',
+                                    'Chairman',
+                                    'Secretary',
+                                    'Treasurer',
+                                    'PRO',
+                                    'Committee'];
         this.dsCurrentUser   = new User();
         this.dsCurrentTeam   = new Team();
         this.dsCurrentMember = new Member();
@@ -74,9 +74,9 @@ export class SessionDataService {
         this.aAlbum        = new Array<Media>();
 
         for ( let i = 0; i < this.showTeamArray.length; i++ )
-    		{
-    			this.showTeamArray[i] = false;
-    		}
+            {
+                this.showTeamArray[i] = false;
+            }
 
     }
 
@@ -293,8 +293,9 @@ export class SessionDataService {
                        {'id':0, 'name': "Junior B", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
                        {'id':0, 'name': "Youths", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
                      ];*/
-
-        return this.http$.get( url + 'public/teams' )
+        this.lg$.log("===>>> Hitting endpoing: " + url + 'backend/public/teams');
+        
+        return this.http$.get( url + 'backend/public/teams' )
     			.subscribe( (data: [Team]) => this.dsSetTeams(data),
     						err => console.error("DataService: ERROR reading teams from server!"),
     						()  => console.log(" <== Teams received from server <==")
@@ -330,7 +331,7 @@ export class SessionDataService {
         this.dsCurrentTeam = null;
         var url            = this.com$.getHome();
 
-        this.http$.get( url + 'public/team/' + teamName )
+        this.http$.get( url + 'backend/public/team/' + teamName )
              .subscribe( (data: Team) => this.dsCurrentTeam = data,
                  					error => console.log("ERROR: Reading team details from server, team: " + teamName),
                  					()    => console.log("Team details read successfully for team: " + teamName)
@@ -349,9 +350,9 @@ export class SessionDataService {
     public loadTeamMembersByIdByObservable( team: number )
     {
         let url = this.com$.getHome();
-        console.log("loadTeamMembersByIdByObservable -> [" + url + 'public/teammembers/' + team + "]");
+        console.log("loadTeamMembersByIdByObservable -> [" + url + 'backend/public/teammembers/' + team + "]");
 
-        return this.http$.get( url + 'public/teammembers/' + team );
+        return this.http$.get( url + 'backend/public/teammembers/' + team );
     }
 
     /**********************************************************
@@ -376,9 +377,9 @@ export class SessionDataService {
         // Clear out the TeamMembers array first
         //this.dsCurrentTeam = null;
         var url = this.com$.getHome();
-        console.log("loadTeamDetailsByNameByObservable -> [" + url + 'public/team' + teamName + "]");
+        console.log("loadTeamDetailsByNameByObservable -> [" + url + 'backend/public/team' + teamName + "]");
 
-        return this.http$.get( url + 'public/team/' + teamName );
+        return this.http$.get( url + 'backend/public/team/' + teamName );
 
     }
 
@@ -413,7 +414,7 @@ export class SessionDataService {
             this.dsTeamMembers[teamId].length = 0;
         var url = this.com$.getHome();
 
-       return this.http$.get( url + 'public/teammembers/' + teamName );
+       return this.http$.get( url + 'backend/public/teammembers/' + teamName );
     }
 
     /**********************************************************
@@ -467,7 +468,7 @@ export class SessionDataService {
         	var url    = this.com$.getHome();
 
            console.log("-->" + "loadCurrentTeamByName(), loading team:" + teamName );
-           this.http$.get( url + 'public/teammembers/' + teamName )
+           this.http$.get( url + 'backend/public/teammembers/' + teamName )
                 .subscribe( data => this.dsTeamMembers[teamId] = data, //callback(data),
               	   					error => console.log("ERROR: Reading team members from server, team: " + teamName),
               	   					()    => console.log("<-- Team members read successfully for team: " + teamName)
@@ -535,7 +536,7 @@ export class SessionDataService {
     public getUser(username: string)
     {
     	console.log("-->" + "getUser(" + username + ")");
-    	return this.http$.get(this.com$.getHome() + '/admin/user');
+    	return this.http$.get(this.com$.getHome() + 'backend/admin/user');
     }
 
 
@@ -551,7 +552,7 @@ export class SessionDataService {
     	console.log("-->" + "dsGetAllMembers()");
     	var url = this.com$.getHome();
 
-    	return this.http$.get(url + "/admin/members")
+    	return this.http$.get(url + "backend/admin/members")
     		.subscribe(
     					(data: [Member]) => this.dsAllMembers = data,
     					err              => console.log("ERROR getting members from server!"),
@@ -714,7 +715,7 @@ export class SessionDataService {
         var url = this.com$.getHome();
         console.log("-->" + " getClubOfficers() - home is (" + url + ")");
 
-        return this.http$.get( url + 'public/officers' );
+        return this.http$.get( url + 'backend/public/officers' );
      }
 
      /**********************************************************
@@ -729,7 +730,7 @@ export class SessionDataService {
     {
       let url = this.com$.getHome();
 
-      return this.http$.get( url + 'public/vcount' );
+      return this.http$.get( url + 'backend/public/vcount' );
     }
 
     /**********************************************************
@@ -744,7 +745,7 @@ export class SessionDataService {
     {
       let url = this.com$.getHome();
 
-      this.http$.get( url + 'public/ivcount' )
+      this.http$.get( url + 'backend/public/ivcount' )
             .subscribe( (data: number) => this.dsVisitorCount = data,
                         error => console.log("ERROR: Incrementing visitor count on server"),
                         ()    => console.log("Visitor count updated successfully")

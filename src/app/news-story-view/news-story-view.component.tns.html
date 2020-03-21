@@ -1,0 +1,18 @@
+<StackLayout class="list-group-item">
+    <GridLayout rows="*" backgroundColor="White">
+        <GridLayout rows="*" columns="*">
+            <Image src="{{serverUrl}}{{ story.image }}" stretch="aspectFill"
+                height="200"></Image>
+            <GridLayout verticalAlignment="top">
+                <StackLayout backgroundColor="#bc3b4e77">
+                    <Label text="{{ story.title }}" class="news-source"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+    <StackLayout paddingTop="15" paddingBottom="20" paddingLeft="15"
+        paddingRight="15" backgroundColor="White">
+        <Label text="{{ story.description }}" class="news-title"
+            textWrap="true"></Label>
+    </StackLayout>
+</StackLayout>

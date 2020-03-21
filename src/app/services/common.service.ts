@@ -40,11 +40,13 @@ export class CommonService {
         if ( environment.production === false )
         {
           this.lg$.log("   |- environment.production is false, returning localhost")
-           //_home = 'http://localhost:8080/backend/';
-           _home = 'http://127.0.0.1:8080/backend/';
+           //_home = 'http://localhost:8080/';
+          //  _home = 'http://127.0.0.1:8080/';
+           _home = 'http://avenueunited.ie.mocha6004.mochahost.com/';
         } else if ( this.CurrentServerMode === this.modes.REMOTE )
         {
-            _home = 'http://www.avenueunited.ie/backend/';
+            // _home = 'http://www.avenueunited.ie/';
+            _home = 'http://avenueunited.ie.mocha6004.mochahost.com/';
         }
 
         this.lg$.log("<- getHome(" + _home + ")");

@@ -51,7 +51,7 @@ export class UserService {
     public getUserDetails ( username: string )
      {
         this.lg$.log("-> getUserDetails(" + username + ")");
-        let url = this.com$.getHome() + "/admin/user/" + username;
+        let url = this.com$.getHome() + "backend/admin/user/" + username;
 
         return this.http$.get( url );
      }
@@ -83,7 +83,7 @@ export class UserService {
 
       this.lg$.log("-->" + "getUser(), reading user from: " + url + 'admin/me/' + user );
 
-      return this.http$.get<User>( url + 'admin/me/' + user, {headers} )
+      return this.http$.get<User>( url + 'backend/admin/me/' + user, {headers} )
         .pipe(
           catchError(this.err$.handleError)
         );
@@ -109,7 +109,7 @@ export class UserService {
 
       this.lg$.log("-->" + "getAllUsers(), loading users from: " + url + '/admin/users/' );
 
-      return this.http$.get<User[]>( url + 'admin/users/', {headers} )
+      return this.http$.get<User[]>( url + 'backend/admin/users/', {headers} )
         .pipe(
           catchError(this.err$.handleError)
         );
@@ -181,7 +181,7 @@ export class UserService {
       this.lg$.log("    |-> deleteUser(" + user.name + ")");
 
       var home    = this.com$.getHome();
-      let userUrl = home + 'admin/user/';
+      let userUrl = home + 'backend/admin/user/';
       // Add the id of the user to delete
       userUrl += user.userId;
 
@@ -232,7 +232,7 @@ export class UserService {
       this.lg$.log("|-> addUser(" + dataSource + ")");
 
       var home    = this.com$.getHome();
-      let userUrl = home + 'admin/user/';
+      let userUrl = home + 'backend/admin/user/';
 
     	this.lg$.log("URL: " + userUrl);
 
@@ -268,7 +268,7 @@ export class UserService {
     {
       this.lg$.log("    |-> updateUser(" + user.name + ")");
     	var home      = this.com$.getHome();
-    	let memberUrl = home + 'admin/user/';
+    	let memberUrl = home + 'backend/admin/user/';
 
     	this.lg$.log("URL: " + memberUrl);
 

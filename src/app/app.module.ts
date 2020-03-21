@@ -11,6 +11,7 @@ import { AppComponent } from '@src/app/app.component';
 import { HomeComponent } from '@src/app/home/home.component';
 import { NavComponent } from '@src/app/nav/nav.component';
 import { NewsComponent } from '@src/app/news/news.component';
+import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
 
 import { AuthService } from '@src/app/services/auth.service';
 import { LoggerService } from '@src/app/services/logger.service';
@@ -27,7 +28,8 @@ import { NewsService } from '@src/app/services/news.service';
     AppComponent,
     HomeComponent,
     NavComponent,
-    NewsComponent
+    NewsComponent,
+    NewsStoryViewComponent
   ],
   imports: [
     BrowserModule,

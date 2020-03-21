@@ -1,9 +1,22 @@
-<ListView [items] = "news$.NewsStories" class="list-group">
-    <ng-template let-item="item"> <!--(itemTap)="onItemTap($event)"> -->
+<ListView [items] = "news$.NewsStories" class="list-group" marginRight="-2" (itemTap)="onItemTap($event)">
+    <ng-template tkListItemTemplate let-item="item">
         <StackLayout class="list-group-item">
-            <Label [text]="item.title"></Label>
-            <Label [text]="item.description"></Label>
-            <Label [text]="item.story"></Label>
+            <GridLayout rows="*" backgroundColor="White">
+                <GridLayout rows="*" columns="*">
+                    <Image src="{{serverUrl}}{{ item.image }}" stretch="aspectFill"
+                        height="200"></Image>
+                    <GridLayout verticalAlignment="top">
+                        <StackLayout backgroundColor="#bc3b4e77">
+                            <Label text="{{ item.title }}" class="news-source"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </GridLayout>
+            </GridLayout>
+            <StackLayout paddingTop="15" paddingBottom="20" paddingLeft="15"
+                paddingRight="15" backgroundColor="White">
+                <Label text="{{ item.description }}" class="news-title"
+                    textWrap="true"></Label>
+            </StackLayout>
         </StackLayout>
     </ng-template>
 </ListView>

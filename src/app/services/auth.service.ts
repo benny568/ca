@@ -34,7 +34,7 @@ export class AuthService {
      **********************************************************/
     authenticate(username: string, password: string) {
         let home = this.com$.getHome();
-    	let url = home + "login";
+    	let url = home + "backend/login";
         let params = 'username='+username+'&password='+password;
         let headers = new HttpHeaders(
         {
@@ -48,7 +48,7 @@ export class AuthService {
      logout()
      {
         let home = this.com$.getHome();
-    	let url = home + "logout";
+    	let url = home + "backend/logout";
 
     	return this.http.get( url, { withCredentials: true } );
      }
