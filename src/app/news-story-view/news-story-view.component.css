@@ -1,0 +1,21 @@
+.news-title {
+    color: #333f4a;
+    background-color: white;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    font-size: 24;
+    font-weight: bold;
+    padding-left: 15;
+}
+.news-description {
+    color: white;
+    background-color: gray;
+    font-size: 24pc;
+    font-weight: bold;
+    padding-left: 15;
+}
+.news-story {
+    color: black;
+    background-color: white;
+    font-size: 18pc;
+    padding: 15 15 15 15;
+}
