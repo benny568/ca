@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { RouterExtensions } from "nativescript-angular/router";
+import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from "nativescript-ui-sidedrawer";
+import { filter } from "rxjs/operators";
+import * as app from "tns-core-modules/application";
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
@@ -15,10 +20,12 @@ import { SessionDataService } from '@src/app/services/session-data.service';
   styleUrls: ['./app.component.css'],
   moduleId: module.id
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   componentName = 'AppComponent';
     logdepth      = 0;
     loggedIn      = '';
+    private _activatedUrl: string;
+    private _sideDrawerTransition: DrawerTransitionBase;
     
     constructor( private lg$    : LoggerService,
                  private com$   : CommonService,
@@ -27,12 +34,41 @@ export class AppComponent {
                  public  user$  : UserService,
                  public  cookie$: CookieService,
                  private router : Router,
-                 private _http  : HttpClient ) 
+                 private _http  : HttpClient,
+                 private routerExtensions: RouterExtensions ) 
         {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
     
         // Load the teams to use in the menu system
         this.d$.dsGetTeams();
+    }
+
+    ngOnInit(): void {
+        this._activatedUrl = "/home";
+        this._sideDrawerTransition = new SlideInOnTopTransition();
+
+        this.router.events
+        .pipe(filter((event: any) => event instanceof NavigationEnd))
+        .subscribe((event: NavigationEnd) => this._activatedUrl = event.urlAfterRedirects);
+    }
+
+    get sideDrawerTransition(): DrawerTransitionBase {
+        return this._sideDrawerTransition;
+    }
+
+    isComponentSelected(url: string): boolean {
+        return this._activatedUrl === url;
+    }
+
+    onNavItemTap(navItemRoute: string): void {
+        this.routerExtensions.navigate([navItemRoute], {
+            transition: {
+                name: "fade"
+            }
+        });
+
+        const sideDrawer = <RadSideDrawer>app.getRootView();
+        sideDrawer.closeDrawer();
     }
 
     goToTeamView(team) {

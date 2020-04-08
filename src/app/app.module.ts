@@ -23,6 +23,7 @@ import { CookieService } from '@src/app/services/cookie.service';
 import { NewsService } from '@src/app/services/news.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

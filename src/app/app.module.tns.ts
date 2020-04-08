@@ -8,7 +8,6 @@ import { HomeComponent } from '@src/app/home/home.component';
 import { NewsComponent } from '@src/app/news/news.component';
 import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
 
-
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
@@ -24,6 +23,7 @@ import { ErrorService } from '@src/app/services/error.service';
 import { CookieService } from '@src/app/services/cookie.service';
 import { NewsService } from '@src/app/services/news.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +32,8 @@ import { NewsService } from '@src/app/services/news.service';
     NewsStoryViewComponent
   ],
   imports: [
-    NativeScriptModule,
     AppRoutingModule,
+    NativeScriptModule,
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule
   ],

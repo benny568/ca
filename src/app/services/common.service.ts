@@ -194,13 +194,13 @@ export class CommonService {
      * Params in  : The array to clear
      * Return     : none
      **********************************************************/
-  	public clearArray( array)//, lg$: LoggerService )
+  	public clearArray( array, lg$: LoggerService )
   	{
-  		//lg$.trace("-> clearArray()");
+  		lg$.trace("-> clearArray()");
 
   		while( array.length )
   		{
-  			//lg$.trace("....sending array value to trash");
+  			lg$.trace("....sending array value to trash");
   			array.pop();
   		}
     }
