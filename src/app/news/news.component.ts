@@ -11,8 +11,7 @@ import { NewsStory } from '@src/app/model/news-story';
     selector   : 'news',
     templateUrl: './news.component.html',
     styleUrls  : ['./news.component.css'],
-    providers  : [ LoggerService ],
-    moduleId   : module.id
+    providers  : [ LoggerService ]
 })
 
 export class NewsComponent {
@@ -40,7 +39,7 @@ export class NewsComponent {
         this.lg$.log("ngOnInit() - serverUrl set to: " + this.serverUrl);
     }
 
-    private onItemTap(args) {
+    public onItemTap(args) {
       this.lg$.log("Story was clicked in position: " + args.index );
       this.news$.currentStory = this.news$.NewsStories[args.index];
       this.router.navigate(["home/story"]);

@@ -6,7 +6,6 @@ import { NewsService } from '@src/app/services/news.service';
 import { NewsStory } from '@src/app/model/news-story';
 
 @Component({
-    moduleId: module.id,
     templateUrl: './news-story-view.component.html',
     styleUrls: ['./news-story-view.component.css'],
     providers: [LoggerService]

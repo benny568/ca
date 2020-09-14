@@ -4,7 +4,6 @@ import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'app-club-history',
     templateUrl: './clubhistory.component.html',
     styleUrls: ['./clubhistory.component.css'],

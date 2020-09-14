@@ -1,8 +1,7 @@
 {
-	"time": "Tue Feb 25 2020 17:40:19 GMT+0000 (Greenwich Mean Time)",
+	"time": "Mon Sep 14 2020 12:11:15 GMT+0100 (Irish Standard Time)",
 	"nativePlatformStatus": "3",
-	"release": false,
 	"changesRequireBuild": true,
-	"projectFileHash": "8a8c0f67290d33680b58bc25cfd9134bdf2cd38029c95df0369a4302cfe7624c",
-	"changesRequireBuildTime": "Tue Feb 25 2020 17:40:19 GMT+0000 (Greenwich Mean Time)"
+	"projectFileHash": "9313e3158e3de58e7a0178a3965a514cc254de0e2e56a5828ce5838631785570",
+	"changesRequireBuildTime": "Mon Sep 14 2020 12:11:15 GMT+0100 (Irish Standard Time)"
 }

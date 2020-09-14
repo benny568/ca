@@ -2,10 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { RouterExtensions } from "nativescript-angular/router";
-import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from "nativescript-ui-sidedrawer";
 import { filter } from "rxjs/operators";
-import * as app from "tns-core-modules/application";
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
@@ -18,14 +15,13 @@ import { SessionDataService } from '@src/app/services/session-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  moduleId: module.id
+//   moduleId: module.id
 })
 export class AppComponent implements OnInit {
   componentName = 'AppComponent';
     logdepth      = 0;
     loggedIn      = '';
     private _activatedUrl: string;
-    private _sideDrawerTransition: DrawerTransitionBase;
     
     constructor( private lg$    : LoggerService,
                  private com$   : CommonService,
@@ -34,8 +30,7 @@ export class AppComponent implements OnInit {
                  public  user$  : UserService,
                  public  cookie$: CookieService,
                  private router : Router,
-                 private _http  : HttpClient,
-                 private routerExtensions: RouterExtensions ) 
+                 private _http  : HttpClient ) 
         {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
     
@@ -45,33 +40,18 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         this._activatedUrl = "/home";
-        this._sideDrawerTransition = new SlideInOnTopTransition();
 
         this.router.events
         .pipe(filter((event: any) => event instanceof NavigationEnd))
         .subscribe((event: NavigationEnd) => this._activatedUrl = event.urlAfterRedirects);
     }
 
-    get sideDrawerTransition(): DrawerTransitionBase {
-        return this._sideDrawerTransition;
-    }
 
     isComponentSelected(url: string): boolean {
         return this._activatedUrl === url;
     }
 
-    onNavItemTap(navItemRoute: string): void {
-        this.routerExtensions.navigate([navItemRoute], {
-            transition: {
-                name: "fade"
-            }
-        });
-
-        const sideDrawer = <RadSideDrawer>app.getRootView();
-        sideDrawer.closeDrawer();
-    }
-
-    goToTeamView(team) {
+     goToTeamView(team) {
       this.lg$.log('-> goToTeamView(' + team + ')');
       this.d$.loadTeamDetailsByNameByObservable(team, this.logdepth)
               .subscribe( data => this.getTeamMembers( data ),

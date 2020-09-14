@@ -8,7 +8,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "target": "es2015",
+        "target": "es2017",
         "typeRoots": [
             "node_modules/@types"
         ],
@@ -31,18 +31,19 @@
             "~/*": [
                 "src/*"
             ]
-        }
+        },
+        "removeComments": false
     },
     "include": [
-      "references.d.ts",
-      "src/tests/**/*.ts"
+        "references.d.ts",
+        "src/tests/**/*.ts"
     ],
     "files": [
-      "./src/main.ts"
+        "./src/main.ts"
     ],
     "exclude": [
-      "node_modules",
-      "platforms",
-      "e2e"
+        "node_modules",
+        "platforms",
+        "e2e"
     ]
 }
