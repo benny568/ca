@@ -15,6 +15,7 @@ import { SessionDataService } from '@src/app/services/session-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [ LoggerService ]
 //   moduleId: module.id
 })
 export class AppComponent implements OnInit {

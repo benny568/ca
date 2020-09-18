@@ -7,6 +7,8 @@ import { NativeScriptHttpClientModule } from '@nativescript/angular';
 import { MaterialModule } from '@src/app/material.module';
 
 import { SHARED_MODULES } from './app.common';
+import { RouterModule } from '@src/app/common/router-module';
+import { routes } from '@src/app/app.routes';
 import { AppComponent } from '@src/app/app.component';
 import { HomeComponent } from '@src/app/home/home.component';
 import { NewsComponent } from '@src/app/news/news.component';
@@ -36,7 +38,9 @@ import { NewsService } from '@src/app/services/news.service';
     NewsStoryViewComponent
   ],
   imports: [
-    ...SHARED_MODULES,
+    // ...SHARED_MODULES,
+    RouterModule,
+    RouterModule.forRoot(routes),
     NativeScriptModule,
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule,
