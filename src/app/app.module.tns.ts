@@ -4,7 +4,7 @@ import { NativeScriptModule } from '@nativescript/angular';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptHttpClientModule } from '@nativescript/angular';
 
-import { MaterialModule } from '@src/app/material.module';
+// import { MaterialModule } from '@src/app/material.module';
 
 import { SHARED_MODULES } from './app.common';
 import { RouterModule } from '@src/app/common/router-module';
@@ -21,8 +21,8 @@ import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view
 
 
 // import { AuthService } from '@src/app/services/auth.service';
-// import { LoggerService } from '@src/app/services/logger.service';
-// import { CommonService } from '@src/app/services/common.service';
+import { LoggerService } from '@src/app/services/logger.service';
+import { CommonService } from '@src/app/services/common.service';
 // import { SessionDataService } from '@src/app/services/session-data.service';
 // import { UserService } from '@src/app/services/user.service';
 // import { ErrorService } from '@src/app/services/error.service';
@@ -44,12 +44,12 @@ import { NewsService } from '@src/app/services/news.service';
     NativeScriptModule,
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule,
-    MaterialModule
+    // MaterialModule
   ],
   providers: [
     // AuthService,
-    // LoggerService,
-    // CommonService,
+    LoggerService,
+    CommonService,
     // SessionDataService,
     // UserService,
     // ErrorService,
