@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { CommonService } from '@src/app/services/common.service';
 import { LoggerService } from '@src/app/services/logger.service';
@@ -22,7 +22,5 @@ export class NewsStoryViewComponent {
                  private com$: CommonService ) {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
         this.serverUrl = this.com$.getHome();
-        this.story = this.news$.currentStory;
-        this.lg$.log("Story set to : " + this.story.title);
     }
 }

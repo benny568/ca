@@ -1,6 +1,5 @@
-<div *ngFor="let story of news$.NewsStories">
-    
-    <div>
+<div *ngFor="let story of news$.NewsStories"> 
+    <div (click)="onItemClickweb( story )">
         <div class="news-source news-source-web">
             {{story.title}}
         </div>

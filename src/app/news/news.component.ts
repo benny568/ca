@@ -45,6 +45,13 @@ export class NewsComponent {
       this.router.navigate(["home/story"]);
     }
 
+    public onItemClickweb( story: NewsStory )
+    {
+        this.news$.currentStory = story;
+        this.lg$.log("Story was clicked in position: " + this.news$.currentStory.nsid );
+        this.router.navigate(["home/story"]);
+    }
+
     private createNews() {
       this.lg$.log("=> this.createNews()...");
       this.theNews = 
