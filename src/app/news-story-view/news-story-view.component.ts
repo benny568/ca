@@ -22,5 +22,6 @@ export class NewsStoryViewComponent {
                  private com$: CommonService ) {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
         this.serverUrl = this.com$.getHome();
+        this.story = this.news$.currentStory;
     }
 }
