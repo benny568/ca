@@ -5,6 +5,7 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  moduleId: module.id
 })
 
 export class AppComponent {
