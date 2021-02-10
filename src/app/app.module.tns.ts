@@ -4,30 +4,18 @@ import { NativeScriptModule } from '@nativescript/angular';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptHttpClientModule } from '@nativescript/angular';
 
-// import { MaterialModule } from '@src/app/material.module';
+import { AppRoutingModule } from './app-routing.module';
 
-import { SHARED_MODULES } from './app.common';
-import { RouterModule } from '@src/app/common/router-module';
-import { routes } from '@src/app/app.routes';
-import { AppComponent } from '@src/app/app.component';
-import { HomeComponent } from '@src/app/home/home.component';
-import { NewsComponent } from '@src/app/news/news.component';
-import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
-
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from 'nativescript/angular/forms';
-
-// Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { NewsComponent } from './news/news.component';
+import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
 
 
-// import { AuthService } from '@src/app/services/auth.service';
-import { LoggerService } from '@src/app/services/logger.service';
-import { CommonService } from '@src/app/services/common.service';
-// import { SessionDataService } from '@src/app/services/session-data.service';
-// import { UserService } from '@src/app/services/user.service';
-// import { ErrorService } from '@src/app/services/error.service';
-// import { CookieService } from '@src/app/services/cookie.service';
-import { NewsService } from '@src/app/services/news.service';
+import { LoggerService } from './services/logger.service';
+import { CommonService } from './services/common.service';
+import { SessionDataService } from './services/session-data.service';
+import { NewsService } from './services/news.service';
 
 
 @NgModule({
@@ -38,22 +26,16 @@ import { NewsService } from '@src/app/services/news.service';
     NewsStoryViewComponent
   ],
   imports: [
-    // ...SHARED_MODULES,
-    RouterModule,
-    RouterModule.forRoot(routes),
     NativeScriptModule,
+    AppRoutingModule,
     NativeScriptHttpClientModule,
-    NativeScriptUISideDrawerModule,
-    // MaterialModule
+    NativeScriptUISideDrawerModule
   ],
+  exports: [],
   providers: [
-    // AuthService,
     LoggerService,
     CommonService,
-    // SessionDataService,
-    // UserService,
-    // ErrorService,
-    // CookieService,
+    SessionDataService,
     NewsService
   ],
   bootstrap: [AppComponent],

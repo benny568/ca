@@ -4,12 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { filter } from "rxjs/operators";
 
-import { LoggerService } from '@src/app/services/logger.service';
-import { CommonService } from '@src/app/services/common.service';
-import { AuthService } from '@src/app/services/auth.service';
-import { UserService } from '@src/app/services/user.service';
-import { CookieService } from '@src/app/services/cookie.service';
-import { SessionDataService } from '@src/app/services/session-data.service';
+import { LoggerService } from './services/logger.service';
+import { CommonService } from './services/common.service';
+import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
+import { CookieService } from './services/cookie.service';
+import { SessionDataService } from './services/session-data.service';
 
 @Component({
   selector: 'app-root',

@@ -19,7 +19,6 @@ import { CookieService } from '@src/app/services/cookie.service';
   exports: [
     CommonModule,
     FormsModule,
-    RouterModule,
   ],
   providers: [
     AuthService,

@@ -1,4 +1,4 @@
-<!-- <RadSideDrawer [drawerTransition]="sideDrawerTransition">
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
     <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
         <StackLayout row="0" class="nt-drawer__header">
             <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
@@ -13,7 +13,7 @@
                     <Label col="1" text="Home" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/galery')" (tap)="onNavItemTap('/galery')">
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/galery')" (tap)="onNavItemTap('/photos')">
                     <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
                     <Label col="1" text="Galery" class="p-r-10"></Label>
                 </GridLayout>
@@ -40,7 +40,7 @@
     
                 <StackLayout class="hr"></StackLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/information')" (tap)="onNavItemTap('/information')">
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('information')" (tap)="onNavItemTap('/information')">
                     <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
                     <Label col="1" text="Information" class="p-r-10"></Label>
                 </GridLayout>
@@ -54,6 +54,7 @@
     </GridLayout>
 
     <page-router-outlet tkMainContent></page-router-outlet>
-</RadSideDrawer> -->
+</RadSideDrawer>
 
-<page-router-outlet tkMainContent></page-router-outlet>
+<!-- <page-router-outlet tkMainContent></page-router-outlet> -->
+

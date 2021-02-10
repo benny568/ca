@@ -1,20 +1,21 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SHARED_MODULES } from './app.common';
+import { RouterModule } from './common';
 
-// import { MaterialModule } from '@src/app/material.module';
-// import { CovalentModule } from '@src/app/covalent.module';
+// import { MaterialModule } from './material.module';
+// import { CovalentModule } from './covalent.module';
 
-// import { AppComponent } from '@src/app/app.component';
-// import { HomeComponent } from '@src/app/home/home.component';
-// import { NavComponent } from '@src/app/nav/nav.component';
-// import { NewsComponent } from '@src/app/news/news.component';
-// import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
+// import { AppComponent } from './app.component';
+// import { HomeComponent } from './home/home.component';
+// import { NavComponent } from './nav/nav.component';
+// import { NewsComponent } from './news/news.component';
+// import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
 import { MaterialModule } from './material.module';
 import { CovalentModule } from './covalent.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,14 +24,13 @@ import { NewsComponent } from './news/news.component';
 import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
 
 
-// import { AuthService } from '@src/app/services/auth.service';
-// import { LoggerService } from '@src/app/services/logger.service';
-// import { CommonService } from '@src/app/services/common.service';
-// import { SessionDataService } from '@src/app/services/session-data.service';
-// import { UserService } from '@src/app/services/user.service';
-// import { ErrorService } from '@src/app/services/error.service';
-// import { CookieService } from '@src/app/services/cookie.service';
-// import { NewsService } from '@src/app/services/news.service';
+import { AuthService } from './services/auth.service';
+import { LoggerService } from './services/logger.service';
+import { CommonService } from './services/common.service';
+import { SessionDataService } from './services/session-data.service';
+import { UserService } from './services/user.service';
+import { ErrorService } from './services/error.service';
+import { CookieService } from './services/cookie.service';
 import { NewsService } from './services/news.service';
 
 
@@ -46,19 +46,20 @@ import { NewsService } from './services/news.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ...SHARED_MODULES,
+    AppRoutingModule,
+    RouterModule,
     HttpClientModule,
     MaterialModule,
     CovalentModule
   ],
   providers: [
-    // AuthService,
-    // LoggerService,
-    // CommonService,
-    // SessionDataService,
-    // UserService,
-    // ErrorService,
-    // CookieService,
+    AuthService,
+    LoggerService,
+    CommonService,
+    SessionDataService,
+    UserService,
+    ErrorService,
+    CookieService,
     NewsService
   ],
   bootstrap: [AppComponent]

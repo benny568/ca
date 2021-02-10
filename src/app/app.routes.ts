@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'home/story', component: NewsStoryViewComponent },
-  { path: "information", loadChildren: () => import("@src/app/information/information.module").then(m => m.InformationModule) }
+  { path: "information", loadChildren: () => import("./information/information.module").then(m => m.InformationModule) }
 ];
