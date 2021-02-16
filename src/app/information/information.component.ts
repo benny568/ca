@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
@@ -16,8 +15,8 @@ export class InformationComponent {
     logdepth      = 2;
 
     constructor( private lg$: LoggerService,
-                 private common$: CommonService,
-                 public router: Router ) {
+                 private common$: CommonService ) {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
     }
+
 }

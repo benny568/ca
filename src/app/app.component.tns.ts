@@ -33,5 +33,6 @@ export class AppComponent implements OnInit {
   onNavItemTap( path: string ) {
     console.log("Asked to navigate to: " + path );
     this.router.navigateByUrl(path);
+    this.closeDrawer();
   }
 }

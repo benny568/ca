@@ -1,8 +1,8 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
-import { InformationRoutingModule } from "@src/app/information/information-routing.module";
-import { InformationComponent } from "@src/app/information/information.component";
-import { ClubHistoryComponent } from "@src/app/information/clubhistory/clubhistory.component";
+import { InformationRoutingModule } from "./information-routing.module";
+import { InformationComponent } from "./information.component";
+import { ClubHistoryComponent } from "./clubhistory/clubhistory.component";
 import { LinksComponent } from "./links/links.component";
 import { DownloadsComponent } from "./downloads/downloads.component";
 import { FindUsComponent } from "./find-us/find-us.component";

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { NativeScriptRouterModule as RouterModule } from '@nativescript/angular';
 
 import { InformationComponent } from "./information.component";
 import { ClubHistoryComponent } from "./clubhistory/clubhistory.component";

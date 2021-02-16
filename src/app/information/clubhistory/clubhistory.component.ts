@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../common';
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
@@ -52,11 +53,17 @@ own grounds at Roslevan, Ennis and have made that their home for the years ahead
     imageUrl: string = "http://avenueunited.ie.mocha6004.mochahost.com/galleries/2019/JuniorA/JuniorA-2019.jpg";
     
     constructor( private lg$    : LoggerService,
-                 private common$: CommonService ) {
+                 private common$: CommonService,
+                 private router$: Router ) {
         this.lg$.setLogHdr(this.logdepth, this.componentName);
     }
 
     ngOnInit() {
     }
+
+    onNavItemTap( path: string ) {
+        console.log("Asked to navigate to: " + path );
+        this.router$.navigateByUrl(path);
+      }
 
 }
