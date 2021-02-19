@@ -1,0 +1,23 @@
+<Gridlayout rows="auto,auto,auto,auto" columns="60,100,100,*">
+ 
+    <StackLayout col="0" orientation="vertical">
+        <Label text="Office" class="clubHeader"></Label>
+        <Label *ngFor="let o of officers" [text]='o.office' ></Label>
+    </StackLayout>
+
+    <StackLayout col="1" orientation="vertical">
+        <Label text="Name" class="clubHeader"></Label>
+        <Label *ngFor="let o of officers" [text]='o.name' ></Label>
+    </StackLayout>
+
+    <StackLayout col="2" orientation="vertical">
+        <Label text="Phone" class="clubHeader"></Label>
+        <Label *ngFor="let o of officers" [text]='o.phone' ></Label>
+    </StackLayout>
+
+    <StackLayout col="3" orientation="vertical">
+        <Label text="email" class="clubHeader"></Label>
+        <Label *ngFor="let o of officers" [text]='o.email' ></Label>
+    </StackLayout>
+ 
+</Gridlayout>

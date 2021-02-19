@@ -19,7 +19,7 @@ import { SessionDataService } from './services/session-data.service';
 //   moduleId: module.id
 })
 export class AppComponent implements OnInit {
-  componentName = 'AppComponent';
+  componentName = 'AppComponent(W)';
     logdepth      = 0;
     loggedIn      = '';
     private _activatedUrl: string;

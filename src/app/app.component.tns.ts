@@ -4,6 +4,9 @@ import { Router } from './common';
 import * as app from '@nativescript/core/application';
 import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
 
+import { LoggerService } from './services/logger.service';
+import { SessionDataService } from './services/session-data.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,8 +15,17 @@ import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nat
 
 export class AppComponent implements OnInit {
   private _sideDrawerTransition: DrawerTransitionBase;
+  private componentName: string = "AppComponent(M)";
+  private logdepth: number = 1;
 
-  constructor( private router: Router ) {}
+  constructor( private lg$: LoggerService,
+                private d$: SessionDataService,
+                private router: Router ) {
+    this.lg$.setLogHdr(this.logdepth, this.componentName);
+    
+    // Load the teams to use in the menu system
+    this.d$.dsGetTeams();
+  }
 
   ngOnInit(): void {
     this._sideDrawerTransition = new SlideInOnTopTransition();

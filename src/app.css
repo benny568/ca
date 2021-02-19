@@ -1,3 +1,18 @@
  
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/blue.css';
+
+.clubBgColour {
+    background-color: tomato;
+}
+
+.clubFgTextColour {
+    color: yellow;
+}
+
+.clubHeader {
+    color: yellow;
+    background-color: tomato;
+    font-size: 20em;
+    text-align: left;
+}

@@ -1,0 +1,1 @@
+export { NativeScriptCommonModule as CommonModule } from '@nativescript/angular';

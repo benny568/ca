@@ -1,0 +1,14 @@
+.findUsText {
+    color: black;
+    background-color: white;
+    font-size: 18pc;
+    padding-bottom: 10 10 20 10;
+}
+
+.findUsTitle {
+    color: yellow;
+    background-color: tomato;
+    font-size: 20em;
+    min-height: 50em;
+    text-align: center;
+}

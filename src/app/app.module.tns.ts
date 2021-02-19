@@ -4,19 +4,18 @@ import { NativeScriptModule } from '@nativescript/angular';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptHttpClientModule } from '@nativescript/angular';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '@src/app/app-routing.module';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NewsComponent } from './news/news.component';
-import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
+import { AppComponent } from '@src/app/app.component';
+import { HomeComponent } from '@src/app/home/home.component';
+import { NewsComponent } from '@src/app/news/news.component';
+import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
 
 
-import { LoggerService } from './services/logger.service';
-import { CommonService } from './services/common.service';
-import { SessionDataService } from './services/session-data.service';
-import { NewsService } from './services/news.service';
-
+import { LoggerService } from '@src/app/services/logger.service';
+import { CommonService } from '@src/app/services/common.service';
+import { SessionDataService } from '@src/app/services/session-data.service';
+import { NewsService } from '@src/app/services/news.service';
 
 @NgModule({
   declarations: [
