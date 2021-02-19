@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-import { RouterModule } from './common';
+import { RouterModule } from '@src/app/common';
 
 // import { MaterialModule } from './material.module';
 // import { CovalentModule } from './covalent.module';

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from './common';
-import { routes } from './app.routes';
+import { RouterModule } from '@src/app/common/index';
+import { routes } from '@src/app/app.routes';
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
