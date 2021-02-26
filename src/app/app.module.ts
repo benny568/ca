@@ -2,6 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 // import { MaterialModule } from './material.module';
 // import { CovalentModule } from './covalent.module';
@@ -44,6 +45,7 @@ import { NewsService } from './services/news.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,

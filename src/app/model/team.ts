@@ -2,16 +2,16 @@ export /**
  * Team
  */
 class Team {
-  id:number;
+	id:number;
 	name:string;
 	lrcode:number;
 	lrFixturesCode:number;
 	lrResultsCode:number;
 	noticeboard:string;
 
-	getTeamName()
-	{
-		return this.name;
-	}
+	// getTeamName()
+	// {
+	// 	return this.name;
+	// }
 
 }

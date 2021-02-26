@@ -3,6 +3,8 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from '@nativescript/angular';
 import { NativeScriptHttpClientModule } from '@nativescript/angular';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { NativeScriptCommonModule as CommonModule } from '@nativescript/angular';
+// import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from '@src/app/app-routing.module';
 
@@ -26,6 +28,7 @@ import { NewsService } from '@src/app/services/news.service';
   ],
   imports: [
     NativeScriptModule,
+    CommonModule,
     AppRoutingModule,
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule

@@ -43,7 +43,7 @@ mat-toolbar .clubName {
     color: rgba(255,255,255,0.5);
 }
 .sidedrawer .sidedrawer-header {
-    background-color: #3A53FF;
+    background-color: red;
 }
 .sidedrawer .sidedrawer-header .sidedrawer-header-brand {
     color: #fff;

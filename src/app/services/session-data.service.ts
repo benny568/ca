@@ -21,7 +21,7 @@ export class SessionDataService {
     dsAuthenticated: boolean;
     modes = { LOCAL:0, REMOTE:1};
     CurrentServerMode: number;
-    dsTeams          : Array<Team>;
+    dsTeams          : Team[];
     dsTeamMembers    : any = [];
     dsCurrentTeam    : Team;
     dsCurrentMember  : Member;
@@ -289,10 +289,11 @@ export class SessionDataService {
         var url = this.com$.getHome();
         console.log("-->" + " dsGetTeams() - home is (" + url + ")");
 
-      /*this.dsTeams = [ {'id':0, 'name': "Junior A", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
-                       {'id':0, 'name': "Junior B", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
-                       {'id':0, 'name': "Youths", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
-                     ];*/
+      this.dsTeams = [ {'id':0, 'name': "U10", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
+                       {'id':1, 'name': "U11", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
+                       {'id':2, 'name': "Youths", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
+                     ];
+
         this.lg$.log("===>>> Hitting endpoing: " + url + 'backend/public/teams');
         
         return this.http$.get( url + 'backend/public/teams' )
