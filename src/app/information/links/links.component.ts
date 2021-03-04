@@ -16,12 +16,9 @@ export class LinksComponent {
   componentName = 'LinksComponent';
   logdepth      = 2;
 
-  // public cdslImage = "@src/assets/img/links/CDSL_Crest.jpg";
-  // public csslImage = "../../assets/img/links/cssl.jpeg";
-  // public faiImage = "../../assets/img/links/fai-crest.png";
-  public cdslImage = "@src/assets/img/clubCrest.png";
-  public csslImage = "@src/assets/img/clubCrest.png";
-  public faiImage = "../../assets/img/clubCrest.png";
+  public cdslImage = "~/assets/img/links/CDSL_Crest.jpg";
+  public csslImage = "~/assets/img/links/cssl.jpeg";
+  public faiImage = "~/assets/img/links/fai-crest.png";
 
   links: Link[];
 

@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
 
   onNavItemTap( path: string, team: string ) {
     console.log("Clicked on: " + path );
-    this.show = !this.show;
+    this.show = false;
     this.d$.dsCurrentTeam.name = team;
     
     this.router.navigateByUrl(path);

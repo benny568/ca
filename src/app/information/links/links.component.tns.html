@@ -1,13 +1,10 @@
-<Gridlayout rows="auto,a*" columns="100,*">
- 
-    <StackLayout col="0" orientation="vertical">
-        <Label text="Link" class="clubHeader"></Label>
-        <Image *ngFor="let l of links" src="{{ l.image }}"></Image>
-    </StackLayout>
-
-    <StackLayout col="1" orientation="vertical">
-        <Label text="Description" class="clubHeader"></Label>
-        <Label *ngFor="let l of links" [text]='l.description' ></Label>
-    </StackLayout>
- 
-</Gridlayout>
+<StackLayout>
+    <GridLayout rows="auto" columns="100,*">
+        <Label col="0" text='Link' class="clubHeader" style="padding-left: 30;"></Label>
+        <Label col="1" text='Description' class="clubHeader"></Label>
+    </GridLayout>
+    <GridLayout *ngFor="let l of links" rows="auto" columns="100,*">
+        <Image col="0" src="{{ l.image }}" class="link-image"></Image>
+        <Label col="1" [text]='l.description' class="link-text"></Label>
+    </GridLayout>
+</StackLayout>
