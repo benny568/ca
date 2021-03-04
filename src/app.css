@@ -2,6 +2,24 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/blue.css';
 
+/* 
+    File name: fa-regular-400.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+/* 
+    File name: fa-solid-900.ttf 
+    Font name: Font Awesome 5 Free
+*/
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
 .clubBgColour {
     background-color: tomato;
 }
@@ -15,4 +33,13 @@
     background-color: tomato;
     font-size: 20em;
     text-align: left;
+}
+
+.sidedrawer-header {
+    text-align: center;
+}
+
+.sidedrawer-image {
+    height: 100em;
+    width: 100em; 
 }

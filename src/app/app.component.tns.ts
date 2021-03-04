@@ -4,6 +4,8 @@ import { RouterExtensions as Router } from '@nativescript/angular';
 import * as app from '@nativescript/core/application';
 import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
 
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 import { LoggerService } from './services/logger.service';
 import { SessionDataService } from './services/session-data.service';
 
@@ -21,6 +23,7 @@ export class AppComponent implements OnInit {
   private logdepth: number = 1;
   public show: boolean = false;
   public teams: Team[];
+  faCoffee = faCoffee;
 
   constructor( private lg$: LoggerService,
                 private d$: SessionDataService,

@@ -1,25 +1,25 @@
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
-    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
-        <StackLayout row="0" class="sidedrawer-header">
-            <Image style="height: 10px;width: 10px;" src="~/assets/img/clubCrest.png"></Image>
-            <Label text="Avenue United FC"></Label>
-            <Label text="secretary@avenueunited.com"></Label>
+    <GridLayout tkDrawerContent rows="auto, *">
+        <StackLayout row="0">
+            <Image src="~/assets/img/clubCrest.png" width="150" class="m-b-30"></Image>
+            <Label text="Avenue United FC" class="sidedrawer-header"></Label>
+            <Label text="secretary@avenueunited.com" class="sidedrawer-header"></Label>
         </StackLayout>
     
-        <ScrollView row="1" class="nt-drawer__body">
+        <ScrollView row="1">
             <StackLayout>
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home', '')">
                     <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
                     <Label col="1" text="Home" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/gallery')" [nsRouterLink]="['/gallery']">
-                    <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/gallery')" (tap)="onNavItemTap('/gallery','')">
+                    <Label col="0" text="&#xf03e;" class="nt-icon fas"></Label>
                     <Label col="1" text="Gallery" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item">
-                        <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
+                        <Label col="0" text="&#xf0c0;" class="nt-icon fas"></Label>
                         <Label col="1" text="Teams" class="p-r-10" (tap)="show = !show"></Label>
                 </GridLayout>
 
@@ -33,29 +33,29 @@
                 </StackLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured', '')">
-                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="0" text="&#xf073;" class="nt-icon fas"></Label>
                     <Label col="1" text="Fixtures & Results" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('academy')" [nsRouterLink]="['/academy']">
-                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('academy')" (tap)="onNavItemTap('/academy','')">
+                    <Label col="0" text="&#xf1e3;" class="nt-icon fas"></Label>
                     <Label col="1" text="Academy" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured','')">
-                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="0" text="&#xf07a;" class="nt-icon fas"></Label>
                     <Label col="1" text="Merchandise" class="p-r-10"></Label>
                 </GridLayout>
     
                 <StackLayout class="hr"></StackLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('information')" [nsRouterLink]="['/information']">
-                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('information')" (tap)="onNavItemTap('/information','')">
+                    <Label col="0" text="&#xf05a;" class="nt-icon fas"></Label>
                     <Label col="1" text="Information" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" [nsRouterLink]="['/information']">
-                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/information','')">
+                    <Label col="0" text="&#xf084;" class="nt-icon fas fa-user"></Label>
                     <Label col="1" text="Login" class="p-r-10"></Label>
                 </GridLayout>
             </StackLayout>

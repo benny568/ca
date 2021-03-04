@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 // import { MaterialModule } from './material.module';
 // import { CovalentModule } from './covalent.module';
 
@@ -49,7 +51,8 @@ import { NewsService } from './services/news.service';
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    CovalentModule
+    CovalentModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthService,
