@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { NewsComponent } from './news/news.component';
 import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
+import { CookieConsentComponent } from './cookie-consent/cookie-consent.component';
+import { MerchandiseComponent } from './merchandise/merchandise.component';
 
 
 import { AuthService } from './services/auth.service';
@@ -42,7 +44,9 @@ import { NewsService } from './services/news.service';
     HomeComponent,
     NavComponent,
     NewsComponent,
-    NewsStoryViewComponent
+    NewsStoryViewComponent,
+    CookieConsentComponent,
+    MerchandiseComponent
   ],
   imports: [
     BrowserModule,

@@ -12,19 +12,22 @@ import { AppComponent } from '@src/app/app.component';
 import { HomeComponent } from '@src/app/home/home.component';
 import { NewsComponent } from '@src/app/news/news.component';
 import { NewsStoryViewComponent } from '@src/app/news-story-view/news-story-view.component';
+import { MerchandiseComponent } from '@src/app/merchandise/merchandise.component';
 
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
 import { SessionDataService } from '@src/app/services/session-data.service';
 import { NewsService } from '@src/app/services/news.service';
+import { CookieService } from '@src/app/services/cookie.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NewsComponent,
-    NewsStoryViewComponent
+    NewsStoryViewComponent,
+    MerchandiseComponent
   ],
   imports: [
     NativeScriptModule,
@@ -38,7 +41,8 @@ import { NewsService } from '@src/app/services/news.service';
     LoggerService,
     CommonService,
     SessionDataService,
-    NewsService
+    NewsService,
+    CookieService
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]

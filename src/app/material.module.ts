@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 //import { DatepickerLocale, APP_DATE_FORMATS } from './date-picker/datepicker-local.component';
@@ -22,12 +23,22 @@ import { MatButtonModule } from  '@angular/material/button';
         MatTableModule,
         MatSnackBarModule,
         MatDatepickerModule,
-        MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule
+        MatToolbarModule, 
+        MatIconModule, 
+        MatSidenavModule, 
+        MatListModule, 
+        MatButtonModule,
+        MatDialogModule
     ],
     exports: [
         MatMenuModule,
         MatTooltipModule,
-        MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule
+        MatToolbarModule, 
+        MatIconModule, 
+        MatSidenavModule, 
+        MatListModule, 
+        MatButtonModule,
+        MatDialogModule
     ],
     providers: [
         // {
