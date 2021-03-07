@@ -19,4 +19,8 @@ export class GalleryHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToAcademyGallery() {
+    this.lg$.log("Going to Academy Gallery...");
+  }
+
 }
