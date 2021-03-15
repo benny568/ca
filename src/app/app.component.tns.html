@@ -22,7 +22,6 @@
                         <Label col="0" text="&#xf0c0;" class="nt-icon fas"></Label>
                         <Label col="1" text="Teams" class="p-r-10" (tap)="show = !show"></Label>
                 </GridLayout>
-
                 <StackLayout *ngIf="show">
                     <GridLayout class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/U10')" (tap)="onNavItemTap('/teams', 'U10')">
                         <Label col="2" text="U10" class="p-r-10"></Label>
@@ -37,10 +36,27 @@
                     <Label col="1" text="Fixtures & Results" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('academy')" (tap)="onNavItemTap('/academy','')">
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('academy')">
                     <Label col="0" text="&#xf1e3;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Academy" class="p-r-10"></Label>
+                    <Label col="1" text="Academy" class="p-r-10" (tap)="showAcademyMenu = !showAcademyMenu"></Label>
                 </GridLayout>
+                <StackLayout *ngIf="showAcademyMenu">
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/news', '')">
+                        <Label col="2" text="News" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                        <Label col="2" text="Overview" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/coaches', '')">
+                        <Label col="2" text="Coaches" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/schedule', '')">
+                        <Label col="2" text="Schedule" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/registration', '')">
+                        <Label col="2" text="Registration" class="p-r-10"></Label>
+                    </GridLayout>
+                </StackLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/merchandise')" (tap)="onNavItemTap('/merchandise','')">
                     <Label col="0" text="&#xf07a;" class="nt-icon fas"></Label>

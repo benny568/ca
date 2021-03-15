@@ -1,1 +1,11 @@
-<Button text="academy-news works!" class="btn btn-primary"></Button>
+<ListView [items] = "news$.NewsStories" class="list-group" marginRight="-2" (itemTap)="onItemTap($event)">
+    <ng-template tkListItemTemplate let-item="item">
+        <StackLayout horzontalAlignment="center" class="list-group-item">
+
+            <Label text="{{ item.title }}" class="news-source" textWrap="true"></Label>
+            <Image src="{{serverUrl}}{{ item.image }}" class="news-image"></Image>          
+            <Label text="{{ item.description }}" class="news-title" textWrap="true"></Label>
+            
+        </StackLayout>
+    </ng-template>
+</ListView>

@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   private componentName: string = "AppComponent(M)";
   private logdepth: number = 1;
   public show: boolean = false;
+  public showAcademyMenu: boolean = false;
   public teams: Team[];
   faCoffee = faCoffee;
 
@@ -55,7 +56,7 @@ export class AppComponent implements OnInit {
 
   onNavItemTap( path: string, team: string ) {
     console.log("Clicked on: " + path );
-    this.show = false;
+    this.show = this.showAcademyMenu = false;
     this.d$.dsCurrentTeam.name = team;
     
     this.router.navigateByUrl(path);

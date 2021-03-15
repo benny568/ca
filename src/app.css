@@ -43,3 +43,36 @@
     height: 100em;
     width: 100em; 
 }
+
+/* News page styles */
+.news-title {
+    color: #333f4a;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    font-size: 24;
+}
+
+.news-source {
+    color: White;
+    background-color: #bc3b4e77;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    text-transform: uppercase;
+    font-size: 20;
+    padding: 8 0 3 10;
+    height: auto;
+}
+
+.news-source-web
+{
+    background-color: darkgrey;
+}
+
+.news-image {
+
+    height: 200;
+    display: block;
+}
+.news-spacer-web {
+    height: 2px;
+    background-color: black;
+    border-top: 5px;
+}
