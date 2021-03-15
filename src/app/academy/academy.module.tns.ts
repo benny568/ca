@@ -2,11 +2,13 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AcademyRoutingModule } from '@src/app/academy/academy-routing.module';
 import { NativeScriptCommonModule } from '@nativescript/angular';
+import { AcademyOverviewComponent } from '@src/app/academy/academy-overview/academy-overview.component';
 import { AcademyNewsComponent } from '@src/app/academy/academy-news/academy-news.component';
+import { AcademyHomeComponent } from '@src/app/academy/academy-home/academy-home.component';
 
 
 @NgModule({
-  declarations: [AcademyNewsComponent],
+  declarations: [AcademyOverviewComponent, AcademyNewsComponent, AcademyHomeComponent],
   imports: [
     AcademyRoutingModule,
     NativeScriptCommonModule

@@ -2,6 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { GalleryRoutingModule } from '@src/app/gallery/gallery-routing.module';
 import { NativeScriptCommonModule } from '@nativescript/angular';
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { GalleryHomeComponent } from '@src/app/gallery/gallery-home/gallery-home.component';
 
 
@@ -9,7 +10,8 @@ import { GalleryHomeComponent } from '@src/app/gallery/gallery-home/gallery-home
   declarations: [GalleryHomeComponent],
   imports: [
     GalleryRoutingModule,
-    NativeScriptCommonModule
+    NativeScriptCommonModule,
+    NativeScriptUIListViewModule
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

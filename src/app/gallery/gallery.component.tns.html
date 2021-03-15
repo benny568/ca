@@ -1,9 +1,10 @@
 <GridLayout>
-    <RadListView [items]="tiles" (itemTap)="onItemTap($event)">
+    <RadListView [items]="tiles" (tap)="onItemTap($event)">
         <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="250" dynamicItemSize="false" spanCount="2"></ListViewGridLayout>
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical">
-                <Image src="{{ item.image }}" class="tile-image"></Image>
+                <Image src="{{ item.image }}" style="width: 80%;"></Image>
+                <Label text="{{ item.title }}" style="text-align: center;"></Label>
             </StackLayout>
         </ng-template>
     </RadListView>

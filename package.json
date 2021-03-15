@@ -41,6 +41,7 @@
     "angular": "^1.8.2",
     "core-js": "^3.8.0",
     "fsevents": "^2.2.1",
+    "nativescript-ui-listview": "^9.1.0",
     "nativescript-ui-sidedrawer": "^9.0.3",
     "reflect-metadata": "~0.1.13",
     "rxjs": "~6.6.3",

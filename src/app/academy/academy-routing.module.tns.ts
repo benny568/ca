@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from '@nativescript/angular';
 
-import { AcademyNewsComponent } from '@src/app/academy/academy-news/academy-news.component';
+import { AcademyHomeComponent } from './academy-home/academy-home.component';
+import { AcademyOverviewComponent } from './academy-overview/academy-overview.component';
+import { AcademyNewsComponent } from './academy-news/academy-news.component';
 
 const routes: Routes = [
-  { path: "", component: AcademyNewsComponent }
+  { path: "", component: AcademyHomeComponent },
+  { path: "overview", component: AcademyOverviewComponent },
+  { path: "news", component: AcademyNewsComponent }
 ];
 
 @NgModule({

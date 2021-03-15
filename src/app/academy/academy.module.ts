@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@src/app/common-module/index';
+import { CommonModule } from '@angular/common';
 
 import { AcademyRoutingModule } from '@src/app/academy/academy-routing.module';
+import { AcademyOverviewComponent } from '@src/app/academy/academy-overview/academy-overview.component';
 import { AcademyNewsComponent } from '@src/app/academy/academy-news/academy-news.component';
+import { AcademyHomeComponent } from '@src/app/academy/academy-home/academy-home.component';
 
 
 @NgModule({
-  declarations: [AcademyNewsComponent],
+  declarations: [AcademyOverviewComponent, AcademyNewsComponent, AcademyHomeComponent],
   imports: [
     CommonModule,
     AcademyRoutingModule
