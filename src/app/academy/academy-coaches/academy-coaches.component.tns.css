@@ -1,1 +1,7 @@
-/* Add mobile styles for the component here.  */
+.table {
+    padding-left: 10%;
+}
+
+.list-text {
+    text-align: center;
+}

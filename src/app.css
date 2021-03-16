@@ -2,6 +2,13 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/blue.css';
 
+/* Action Bar style */
+ActionBar { background-color: red; }
+ActionBar Label { font-size: 30em; font-weight: 900; }
+
+.bigText { font-size: 30em;}
+/*******************************************/
+
 /* 
     File name: fa-regular-400.ttf 
     Font name: Font Awesome 5 Free
@@ -33,6 +40,13 @@
     background-color: tomato;
     font-size: 20em;
     text-align: left;
+    padding-right: 10em;
+}
+
+.clubDefaultPage {
+    background-color: black;
+    color: white;
+    font-size: 12em;
 }
 
 .sidedrawer-header {

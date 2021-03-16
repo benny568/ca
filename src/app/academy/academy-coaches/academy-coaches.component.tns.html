@@ -1,1 +1,33 @@
-<Button text="academy-coaches works!" class="btn btn-primary"></Button>
+<ActionBar title="Academy Coaches for {{currentSeason}}"></ActionBar>
+<StackLayout class="clubDefaultPage table">
+    <!-- Leave a couple lins spacing at the top -->
+    <Label text="&#xa;&#xa;"></Label>
+
+    <Gridlayout rows="auto,auto,auto,auto" columns="auto,auto,auto">
+
+        <StackLayout col="0" orientation="vertical">
+            <GridLayout columns="auto, *" style="text-align: center;">
+                <Label col="0" text="&#xf0c0;" class="clubHeader nt-icon fas"></Label>
+                <Label col="1" text="Group" class="clubHeader"></Label>
+            </GridLayout>
+            <Label *ngFor="let o of officers" [text]='o.office' class="list-text"></Label>
+        </StackLayout>
+
+        <StackLayout col="1" orientation="vertical">
+            <GridLayout columns="auto, *">
+                <Label col="0" text="&#xf073;" class="clubHeader nt-icon fas"></Label>
+                <Label col="1" text="Year of Birth" class="clubHeader"></Label>
+            </GridLayout>
+            <Label *ngFor="let o of officers" [text]='o.phone' class="list-text"></Label>
+        </StackLayout>
+
+        <StackLayout col="2" orientation="vertical">
+            <GridLayout columns="auto, *">
+                <Label col="0" text="&#xf183;" class="clubHeader nt-icon fas"></Label>
+                <Label col="1" text="Coaches" class="clubHeader"></Label>
+            </GridLayout>
+            <Label *ngFor="let o of officers" [text]='o.name' class="list-text"></Label>
+        </StackLayout>
+    
+    </Gridlayout>
+</StackLayout>
