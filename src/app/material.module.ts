@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 
 //import { DatepickerLocale, APP_DATE_FORMATS } from './date-picker/datepicker-local.component';
@@ -28,7 +29,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatSidenavModule, 
         MatListModule, 
         MatButtonModule,
-        MatDialogModule
+        MatDialogModule,
+        MatCardModule
     ],
     exports: [
         MatMenuModule,
@@ -38,7 +40,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatSidenavModule, 
         MatListModule, 
         MatButtonModule,
-        MatDialogModule
+        MatDialogModule,
+        MatCardModule
     ],
     providers: [
         // {

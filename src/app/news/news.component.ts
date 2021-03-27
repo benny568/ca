@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { Router } from '@src/app/common/index';
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { CommonService } from '@src/app/services/common.service';
@@ -16,10 +17,10 @@ import { NewsStory } from '@src/app/model/news-story';
 
 export class NewsComponent {
 
-    componentName = 'NewsComponent';
-    logdepth      = 2;
-    serverUrl: String;
-    theNews: NewsStory[];
+    componentName: string = 'NewsComponent';
+    logdepth     : number = 2;
+    serverUrl    : String;
+    theNews      : NewsStory[];
 
 
     constructor( private lg$: LoggerService,

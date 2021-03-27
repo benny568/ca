@@ -42,13 +42,13 @@ export class CommonService {
           this.lg$.log("   |- environment.production is false, returning localhost")
            //_home = 'http://localhost:8080/';
           //  _home = 'http://127.0.0.1:8080/';
-          //  _home = 'https://avenueunited.ie.mocha6004.mochahost.com/';
-          _home = 'https://t9l3l3t6ga.execute-api.eu-west-1.amazonaws.com/'; // Lambda on AWS
+          _home = 'https://avenueunited.ie.mocha6004.mochahost.com/';
+          // _home = 'https://t9l3l3t6ga.execute-api.eu-west-1.amazonaws.com/'; // Lambda on AWS
         } else if ( this.CurrentServerMode === this.modes.REMOTE )
         {
             // _home = 'http://www.avenueunited.ie/';
-            // _home = 'https://avenueunited.ie.mocha6004.mochahost.com/';
-            _home = 'https://t9l3l3t6ga.execute-api.eu-west-1.amazonaws.com/'; // Lambda on AWS
+            _home = 'https://avenueunited.ie.mocha6004.mochahost.com/';
+            // _home = 'https://t9l3l3t6ga.execute-api.eu-west-1.amazonaws.com/'; // Lambda on AWS
         }
 
         this.lg$.log("<- getHome(" + _home + ")");

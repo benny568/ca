@@ -7,13 +7,15 @@ import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.compo
 import { JunioraGalleryComponent } from './juniora-gallery/juniora-gallery.component';
 import { JuniorbGalleryComponent } from './juniorb-gallery/juniorb-gallery.component';
 import { YouthsGalleryComponent } from './youths-gallery/youths-gallery.component';
+import { DisplayPhotosComponent } from './display-photos/display-photos.component';
 
 const routes: Routes = [
   { path: "", component: GalleryHomeComponent },
   { path: 'academy', component: AcademyGalleryComponent },
   { path: 'juniora', component: JunioraGalleryComponent },
   { path: 'juniorb', component: JuniorbGalleryComponent },
-  { path: 'youths', component: YouthsGalleryComponent }
+  { path: 'youths', component: YouthsGalleryComponent },
+  { path: 'display/:cat1/:cat2', component: DisplayPhotosComponent }
 ];
 
 @NgModule({

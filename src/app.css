@@ -2,6 +2,8 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/blue.css';
 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 /* Action Bar style */
 ActionBar { background-color: red; }
 ActionBar Label { font-size: 30em; font-weight: 900; }
@@ -90,3 +92,19 @@ ActionBar Label { font-size: 30em; font-weight: 900; }
     background-color: black;
     border-top: 5px;
 }
+
+/* Web styles carried over */
+body,
+html {
+    background-image: url("/assets/img/stadium1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    height: 100%
+}
+
+.avenue-yellow-text { color: #fae900  }
+.a-orange-text { color: #fae900  }
+.avenue-heading { background-color: #d90404; color: #fae900; min-height: 40px }
+.avenue-body { background-color: #303030; color: #fff }

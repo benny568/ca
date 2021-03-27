@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { LoggerService } from '../services/logger.service';
-import { SessionDataService } from '../services/session-data.service';
+import { LoggerService } from '@src/app/services/logger.service';
+import { SessionDataService } from '@src/app/services/session-data.service';
 
 @Component({
   selector   : 'app-home',
@@ -15,7 +15,7 @@ export class HomeComponent {
   private logdepth         : number  = 3;
 
   constructor(  private lg$: LoggerService,
-                public d$  : SessionDataService )
+                public  d$ : SessionDataService )
   {
     this.lg$.setLogHdr(this.logdepth, this.componentName);
   }

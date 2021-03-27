@@ -1,1 +1,11 @@
 /* Add mobile styles for the component here.  */
+.item-image {
+    width: 200em;
+    height: 100em;
+    margin-top: 50em;
+}
+.item-title { 
+    text-align: center;
+    color: white;
+    padding: 10em;
+ }

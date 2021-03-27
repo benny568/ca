@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 
 import { GalleryRoutingModule } from '@src/app/gallery/gallery-routing.module';
@@ -12,7 +13,12 @@ import { YouthsGalleryComponent } from '@src/app/gallery/youths-gallery/youths-g
 
 
 @NgModule({
-  declarations: [GalleryHomeComponent, JunioraGalleryComponent, JuniorbGalleryComponent, YouthsGalleryComponent],
+  declarations: [
+    GalleryHomeComponent, 
+    JunioraGalleryComponent, 
+    JuniorbGalleryComponent, 
+    YouthsGalleryComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,

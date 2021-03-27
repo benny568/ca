@@ -16,7 +16,7 @@ import { CommonService }      from '../../services/common.service'
   providers: [LoggerService]
 })
 export class DisplayPhotosComponent implements OnInit {
-    componentName : string = 'AcademyGalleryComponent';
+    componentName : string = 'DisplayPhotosComponent';
     aAlbum          : Array<Media>;
     path            : string = '';
     logdepth        : number = 1;
@@ -37,58 +37,60 @@ export class DisplayPhotosComponent implements OnInit {
   
     ngOnInit()
     {
-      let cat1 = ''; //this.routeParams.get('cat1'); // team
-      let cat2 = ''; //this.routeParams.get('cat2'); // year
-      let cat3 = ''; //this.routeParams.get('cat3'); // event
+      this.lg$.log("ngOnInit()");
+
+      let cat1: String = '2007'; // team
+      let cat2: String = 'Academy'; // year
+      let cat3: String = 'U8'; // event
+      // let cat1 = ''; //this.routeParams.get('cat1'); // team
+      // let cat2 = ''; //this.routeParams.get('cat2'); // year
+      // let cat3 = ''; //this.routeParams.get('cat3'); // event
       var url = '';
       this.aAlbum = new Array<Media>();
   
   
-      this.items = [];
-      // [{
-          //     label: 'File',
-          //     items: [
-          //         {label: 'New', icon: 'fa-plus'},
-          //         {label: 'Open', icon: 'fa-download'}
-          //     ]
-          // },
-          // {
-          //     label: 'Edit',
-          //     items: [
-          //         {label: 'Undo', icon: 'fa-refresh'},
-          //         {label: 'Redo', icon: 'fa-repeat'}
-          //     ]
-          // }];
+      // this.route.params.forEach((params: Params) => {
+      //   cat1 = params['cat1'];
+      //   cat2 = params['cat2'];
+      //   cat3 = params['cat3'];
+      // });
   
+      // this.lg$.log("-> OnInit(" + cat1 + "/" + cat2 + "/" + cat3 + "," + ")");
+
+      // if ( cat3 !== "none" && cat3 !== '' )
+      // {
+      // 	url = this.com$.getHome() + 'backend/public/photos/' + cat1 + '/' + cat2 + '/' + cat3;
+      // 	this.path = '~/assets/img/gallery/' + cat1 + '/' + cat2 + '/' + cat3 + '/';
+      // 	this.lg$.log("Path set to: " + this.path);
+      // } else
+      // {
+      // 	url = this.com$.getHome() + '/photos/' + cat1 + '/' + cat2;
+      // 	this.path = '~/assets/img/gallery/' + cat1 + '/' + cat2 + '/';
+      // 	this.lg$.log("Path set to: " + this.path);
+      // }
   
-      this.route.params.forEach((params: Params) => {
-        cat1 = params['cat1'];
-        cat2 = params['cat2'];
-        cat3 = params['cat3'];
-      });
-  
-      this.lg$.log("-> OnInit(" + cat1 + "/" + cat2 + "/" + cat3 + "," + ")");
-  
-      if ( cat3 !== "none" && cat3 !== '' )
-      {
-        url = this.com$.getHome() + '/photos/' + cat1 + '/' + cat2 + '/' + cat3;
-        this.path = '../galleries/' + cat1 + '/' + cat2 + '/' + cat3 + '/';
-        this.lg$.log("Path set to: " + this.path);
-      } else
-      {
-        url = this.com$.getHome() + '/photos/' + cat1 + '/' + cat2;
-        this.path = '../galleries/' + cat1 + '/' + cat2 + '/';
-        this.lg$.log("Path set to: " + this.path);
-      }
-  
-      this.d$.loadPhotoDetails(url)
-        .subscribe(
-                  data => this.processResponse(data, this.path, this.aAlbum),
-                  error => console.log("===> Error getting list of photos from server."),
-                  () => console.log( "<-" + " loadPhotoDetails()")
-                );
+      // this.d$.loadPhotoDetails(url)
+      //   .subscribe(
+      //             data => this.processResponse(data, this.path, this.aAlbum),
+      //             error => console.log("===> Error getting list of photos from server."),
+      //             () => console.log( "<-" + " loadPhotoDetails()")
+      //           );
+
+      this.populateAlbum();
   
     }
+
+  populateAlbum()
+	{
+    this.lg$.log("populateAlbum()");
+    
+		this.aAlbum = [
+			{ type:"photo",title:"2007",description:"",image:"~/assets/img/tiles/academy.png",thumb:""},
+			{ type:"photo",title:"2008",description:"",image:"~/assets/img/tiles/a-team.jpg",thumb:""},
+			{ type:"photo",title:"2009",description:"",image:"~/assets/img/clubCrest.png",thumb:""},
+			{ type:"photo",title:"2010",description:"",image:"~/assets/img/clubCrest.png",thumb:""},
+		  ];
+	}
   
   
     processResponse( data, path, album )

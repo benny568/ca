@@ -12,9 +12,10 @@ import { SessionDataService } from './services/session-data.service';
 import { Team } from './model/team';
 
 @Component({
-  selector: 'app-root',
+  selector   : 'app-root',
   templateUrl: './app.component.html',
-  moduleId: module.id
+  styleUrls  : ['./app.component.css'],
+  moduleId   : module.id
 })
 
 export class AppComponent implements OnInit {
@@ -23,6 +24,10 @@ export class AppComponent implements OnInit {
   private logdepth: number = 1;
   public show: boolean = false;
   public showAcademyMenu: boolean = false;
+  public showGalleryMenu: boolean = false;
+  public showAcademy2007menu: boolean = false;
+  public showAcademyGalleryMenu: boolean = false;
+  public showAcademy2008menu: boolean = false;
   public teams: Team[];
   faCoffee = faCoffee;
 
@@ -56,7 +61,8 @@ export class AppComponent implements OnInit {
 
   onNavItemTap( path: string, team: string ) {
     console.log("Clicked on: " + path );
-    this.show = this.showAcademyMenu = false;
+    this.show = this.showAcademyMenu = this.showGalleryMenu = this.showAcademyGalleryMenu = false;
+    this.showAcademy2007menu = this.showAcademy2008menu = false;
     this.d$.dsCurrentTeam.name = team;
     
     this.router.navigateByUrl(path);

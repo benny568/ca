@@ -23,7 +23,7 @@ export class HomeComponent {
   public  consent          : boolean          = false;
   public  dialogRef        : MatDialogRef<CookieConsentComponent>;
 
-  constructor(  private lg$: LoggerService,
+  constructor(  private lg$   : LoggerService,
                 public d$     : SessionDataService,
                 public cookie$: CookieService,
                 public dialog : MatDialog )

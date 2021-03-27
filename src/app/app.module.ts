@@ -6,17 +6,11 @@ import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-// import { MaterialModule } from './material.module';
-// import { CovalentModule } from './covalent.module';
-
-// import { AppComponent } from './app.component';
-// import { HomeComponent } from './home/home.component';
-// import { NavComponent } from './nav/nav.component';
-// import { NewsComponent } from './news/news.component';
-// import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
 import { MaterialModule } from './material.module';
 import { CovalentModule } from './covalent.module';
 import { AppRoutingModule } from './app-routing.module';
+import { DisplayUtilitiesModule } from './display-utilities/display-utilities.module';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +19,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsStoryViewComponent } from './news-story-view/news-story-view.component';
 import { CookieConsentComponent } from './cookie-consent/cookie-consent.component';
 import { MerchandiseComponent } from './merchandise/merchandise.component';
+import { PhotosComponent } from './photos/photos.component';
 
 
 import { AuthService } from './services/auth.service';
@@ -46,7 +41,8 @@ import { NewsService } from './services/news.service';
     NewsComponent,
     NewsStoryViewComponent,
     CookieConsentComponent,
-    MerchandiseComponent
+    MerchandiseComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +52,8 @@ import { NewsService } from './services/news.service';
     HttpClientModule,
     MaterialModule,
     CovalentModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    DisplayUtilitiesModule
   ],
   providers: [
     AuthService,

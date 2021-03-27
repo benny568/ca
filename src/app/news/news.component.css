@@ -1,5 +1,11 @@
 .bigText { font-size: 30em; color: rgb(180, 52, 5);}
 
+.newsContainer {
+    width:86%;
+    float: left; 
+    min-height: 400px;
+}
+
 .news-title {
     color: #333f4a;
     font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';

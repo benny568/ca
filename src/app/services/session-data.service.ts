@@ -13,7 +13,6 @@ import { Team } from '../model/team';
 import { Member } from '../model/member';
 import { Sponsor } from "../model/sponsor";
 import { Media } from '../model/media';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class SessionDataService {
@@ -293,7 +292,9 @@ export class SessionDataService {
                        {'id':1, 'name': "U11", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
                        {'id':2, 'name': "Youths", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
                      ];
-
+        // FOR TESTING ONLY
+        url = "https://6nmr0px3y2.execute-api.eu-west-1.amazonaws.com/";
+        /////////////////
         this.lg$.log("===>>> Hitting endpoing: " + url + 'backend/public/teams');
         
         return this.http$.get( url + 'backend/public/teams' )

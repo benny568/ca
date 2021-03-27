@@ -13,10 +13,61 @@
                     <Label col="1" text="Home" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/gallery')" (tap)="onNavItemTap('/gallery','')">
+                <!-- Gallery Menu -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item">
                     <Label col="0" text="&#xf03e;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Gallery" class="p-r-10"></Label>
+                    <Label col="1" text="Gallery" class="p-r-10" (tap)="showGalleryMenu = !showGalleryMenu"></Label>
                 </GridLayout>
+                <StackLayout *ngIf="showGalleryMenu">
+                    <GridLayout class="nt-drawer__list-item" (tap)="showAcademyGalleryMenu = !showAcademyGalleryMenu">
+                        <Label col="2" text="Academy" class="p-r-10"></Label>
+                    </GridLayout>
+                    <!-- Academy -->
+                    <StackLayout *ngIf="showAcademyGalleryMenu" columns="50,*">
+                        <!-- 2007 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy2007menu = !showAcademy2007menu">
+                            <Label col="1" text="2007" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy2007menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U6', '')">
+                                <Label col="1" text="U6" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U7', '')">
+                                <Label col="1" text="U7" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U8', '')">
+                                <Label col="1" text="U8" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2008 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy2008menu = !showAcademy2008menu">
+                            <Label col="1" text="2008" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy2007menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                                <Label col="1" text="U6" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                                <Label col="1" text="U7" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+                    <!-- End of Academy -->
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                        <Label col="2" text="Junior A" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/coaches', '')">
+                        <Label col="2" text="Junior B" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/schedule', '')">
+                        <Label col="2" text="Youths" class="p-r-10"></Label>
+                    </GridLayout>
+                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/registration', '')">
+                        <Label col="2" text="U16" class="p-r-10"></Label>
+                    </GridLayout>
+                </StackLayout>
+                <!-- End of Gallery Meny -->
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item">
                         <Label col="0" text="&#xf0c0;" class="nt-icon fas"></Label>

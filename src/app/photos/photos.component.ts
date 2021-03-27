@@ -18,6 +18,7 @@ export class PhotosComponent implements OnInit {
 	logdepth        : number = 1;
 	paramsObservable: any;
 	display         : boolean;
+	photos          : Media[];
 
 	constructor( private lg$  : LoggerService,
 	             private com$ : CommonService,
@@ -36,7 +37,7 @@ export class PhotosComponent implements OnInit {
 		let cat2           = '';                  //this.routeParams.get('cat2'); // year
 		let cat3           = '';                  //this.routeParams.get('cat3'); // event
 		var url            = '';
-		    this.d$.aAlbum = new Array<Media>();
+		this.d$.aAlbum = new Array<Media>();
 
 		this.lg$.log("PhotosComponent - ngOnInit()")
 
@@ -46,19 +47,20 @@ export class PhotosComponent implements OnInit {
 			cat2         = params['cat2'];
 			cat3         = params['cat3'];
 			this.display = false;
+			// https://avenueunited.ie.mocha6004.mochahost.com/galleries/2007/Academy/U8/02092007178.jpg
 
 
 			this.lg$.log("-> parm change (" + cat1 + "/" + cat2 + "/" + cat3 + ")");
 
 			if ( cat3 !== "none" && cat3 !== '' )
 			{
-				url       = this.com$.getHome() + 'public/photos/' + cat1 + '/' + cat2 + '/' + cat3;
-				this.path = this.com$.getGalleryHome() + 'galleries/' + cat1 + '/' + cat2 + '/' + cat3 + '/';
+				url       = this.com$.getHome() + 'backend/public/photos/' + cat1 + '/' + cat2 + '/' + cat3;
+				this.path = '~/assets/galleries/' + cat1 + '/' + cat2 + '/' + cat3 + '/';
 				this.lg$.log("Path set to: " + this.path);
 			} else
 			{
-				url       = this.com$.getHome() + 'public/photos/' + cat1 + '/' + cat2;
-				this.path = this.com$.getGalleryHome() + 'galleries/' + cat1 + '/' + cat2 + '/';
+				url       = this.com$.getHome() + 'backend/public/photos/' + cat1 + '/' + cat2;
+				this.path = '~/assets/galleries/' + cat1 + '/' + cat2 + '/';
 				this.lg$.log("Path set to: " + this.path);
 			}
 
@@ -92,6 +94,7 @@ export class PhotosComponent implements OnInit {
 		data.forEach(function(row){
 			var photo : Media = new Media();
 			    photo.image   = path + row;
+				// photo.image = "~/assets/img/tiles/academy.png";
 			album.push(photo);
 			self.lg$.log("         |- added image: " + photo.image );
 		});
@@ -100,6 +103,11 @@ export class PhotosComponent implements OnInit {
 		this.d$.printAlbum();
 
 		self.display = true;
+		this.d$.aAlbum.forEach( function(photo){
+			self.lg$.log("Album photo: " + photo.image);
+			
+		})
+		this.photos = this.d$.aAlbum;
 		this.lg$.log("<- processResponse()");
 	}
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { Router } from '@src/app/common/index';
 
 import { LoggerService } from '@src/app/services/logger.service';
 import { SessionDataService } from '@src/app/services/session-data.service';
@@ -7,10 +8,11 @@ import { SessionDataService } from '@src/app/services/session-data.service';
 import { Media } from '@src/app/model/media';
 
 @Component({
-  selector: 'app-gallery-home',
+  selector   : 'app-gallery-home',
   templateUrl: './gallery-home.component.html',
-  styleUrls: ['./gallery-home.component.css'],
-  providers: [ LoggerService ]
+  styleUrls  : ['./gallery-home.component.css'],
+  providers  : [ LoggerService ],
+  moduleId   : module.path
 })
 export class GalleryHomeComponent implements OnInit {
   componentName: string = 'GalleryHomeComponent';
@@ -63,5 +65,7 @@ export class GalleryHomeComponent implements OnInit {
       } 
    }
   }
+
+  public goToAcademyGallery() {}
 
 }
