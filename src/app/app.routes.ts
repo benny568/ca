@@ -10,6 +10,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'home/story', component: NewsStoryViewComponent },
   { path: 'merchandise', component: MerchandiseComponent },
+  { path: 'photos/:cat1/:cat2', component: PhotosComponent },
   { path: 'photos/:cat1/:cat2/:cat3', component: PhotosComponent },
   { path: "gallery", loadChildren: () => import("./gallery/gallery.module").then(m => m.GalleryModule) },
   { path: "information", loadChildren: () => import("./information/information.module").then(m => m.InformationModule) },

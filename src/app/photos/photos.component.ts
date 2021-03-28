@@ -52,16 +52,16 @@ export class PhotosComponent implements OnInit {
 
 			this.lg$.log("-> parm change (" + cat1 + "/" + cat2 + "/" + cat3 + ")");
 
-			if ( cat3 !== "none" && cat3 !== '' )
+			if ( cat3 !== "none" && cat3 !== '' && cat3 !== undefined )
 			{
 				url       = this.com$.getHome() + 'backend/public/photos/' + cat1 + '/' + cat2 + '/' + cat3;
 				this.path = '~/assets/galleries/' + cat1 + '/' + cat2 + '/' + cat3 + '/';
-				this.lg$.log("Path set to: " + this.path);
+				this.lg$.log("[3 Params] Path set to: " + this.path);
 			} else
 			{
 				url       = this.com$.getHome() + 'backend/public/photos/' + cat1 + '/' + cat2;
 				this.path = '~/assets/galleries/' + cat1 + '/' + cat2 + '/';
-				this.lg$.log("Path set to: " + this.path);
+				this.lg$.log("[2 Params] Path set to: " + this.path);
 			}
 
 			this.d$.loadPhotoDetails(url)

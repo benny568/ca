@@ -4,7 +4,7 @@
         <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" ios:itemHeight="250" dynamicItemSize="false" spanCount="2"></ListViewGridLayout>
         <ng-template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical" style="padding-top: 20em;">
-                <Image src="{{ item.image }}" class="item-image"></Image>
+                <Image src="{{ item.image }}" style="width: 100%;"></Image>
                 <Label text="{{ item.title }}" class="item-title"></Label>
             </StackLayout>
         </ng-template>

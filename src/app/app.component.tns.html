@@ -20,7 +20,7 @@
                 </GridLayout>
                 <StackLayout *ngIf="showGalleryMenu">
                     <GridLayout class="nt-drawer__list-item" (tap)="showAcademyGalleryMenu = !showAcademyGalleryMenu">
-                        <Label col="2" text="Academy" class="p-r-10"></Label>
+                        <Label text="Academy" class=""></Label>
                     </GridLayout>
                     <!-- Academy -->
                     <StackLayout *ngIf="showAcademyGalleryMenu" columns="50,*">
@@ -29,43 +29,201 @@
                             <Label col="1" text="2007" class="p-r-10"></Label>
                         </GridLayout>
                         <StackLayout *ngIf="showAcademy2007menu" columns="50,*">
-                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U6', '')">
-                                <Label col="1" text="U6" class="p-r-10"></Label>
-                            </GridLayout>
-                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U7', '')">
-                                <Label col="1" text="U7" class="p-r-10"></Label>
-                            </GridLayout>
                             <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U8', '')">
                                 <Label col="1" text="U8" class="p-r-10"></Label>
                             </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2007/Academy/U9', '')">
+                                <Label col="1" text="U9" class="p-r-10"></Label>
+                            </GridLayout>
                         </StackLayout>
-                        <!-- 2008 -->
-                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy2008menu = !showAcademy2008menu">
-                            <Label col="1" text="2008" class="p-r-10"></Label>
+                        <!-- 2009 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy09menu = !showAcademy09menu">
+                            <Label col="1" text="2009" class="p-r-10"></Label>
                         </GridLayout>
-                        <StackLayout *ngIf="showAcademy2007menu" columns="50,*">
-                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                        <StackLayout *ngIf="showAcademy09menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2009/AcademyGear', '')">
+                                <Label col="1" text="Academy Gear" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2015 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy09menu = !showAcademy09menu">
+                            <Label col="1" text="2015" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy09menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2015/Academy', '')">
+                                <Label col="1" text="Polksa Eire" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2016 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy16menu = !showAcademy16menu">
+                            <Label col="1" text="2016" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy16menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U6', '')">
                                 <Label col="1" text="U6" class="p-r-10"></Label>
                             </GridLayout>
-                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U7', '')">
                                 <Label col="1" text="U7" class="p-r-10"></Label>
                             </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U8', '')">
+                                <Label col="1" text="U8" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U9', '')">
+                                <Label col="1" text="U9" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U10', '')">
+                                <Label col="1" text="U10" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/U11', '')">
+                                <Label col="1" text="U11" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/Academy/PolksaEire', '')">
+                                <Label col="1" text="Polksa Eire" class="p-r-10"></Label>
+                            </GridLayout>
                         </StackLayout>
-
+                        <!-- 2017 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy17menu = !showAcademy17menu">
+                            <Label col="1" text="2017" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy17menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2017/Academy/U10', '')">
+                                <Label col="1" text="U10" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2017/Academy/Santa', '')">
+                                <Label col="1" text="Santa Visit" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2018 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showAcademy18menu = !showAcademy18menu">
+                            <Label col="1" text="2018" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showAcademy18menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2018/Academy/General', '')">
+                                <Label col="1" text="General" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2018/Academy/FAISSS', '')">
+                                <Label col="1" text="FAI Summer Soccer Camp" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2018/Academy/U10', '')">
+                                <Label col="1" text="U10" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
                     </StackLayout>
                     <!-- End of Academy -->
-                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/overview', '')">
+
+                    <!-- Junior A -->
+                    <GridLayout class="nt-drawer__list-item" (tap)="showJAGalleryMenu = !showJAGalleryMenu">
                         <Label col="2" text="Junior A" class="p-r-10"></Label>
                     </GridLayout>
-                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/coaches', '')">
+                    <StackLayout *ngIf="showJAGalleryMenu" columns="50,*">
+                        <!-- 2004 -->
+                        <GridLayout class="nt-drawer__list-item">
+                            <Label col="1" text="2004" class="p-r-10" (tap)="onNavItemTap('/photos/2004/JuniorA', '')"></Label>
+                        </GridLayout>
+                        <!-- 2018 -->
+                        <GridLayout class="nt-drawer__list-item">
+                            <Label col="1" text="2018" class="p-r-10" (tap)="onNavItemTap('/photos/2018/JuniorA', '')"></Label>
+                        </GridLayout>
+                        <!-- 2019 -->
+                        <GridLayout class="nt-drawer__list-item">
+                            <Label col="1" text="2019" class="p-r-10" (tap)="onNavItemTap('/photos/2019/JuniorA', '')"></Label>
+                        </GridLayout>
+                    </StackLayout>
+                    <!-- End of Junior A -->
+
+                    <!-- Junior B -->
+                    <GridLayout class="nt-drawer__list-item" (tap)="showJBGalleryMenu = !showJBGalleryMenu">
                         <Label col="2" text="Junior B" class="p-r-10"></Label>
                     </GridLayout>
-                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/schedule', '')">
-                        <Label col="2" text="Youths" class="p-r-10"></Label>
+                    <StackLayout *ngIf="showJBGalleryMenu" columns="50,*">
+                        <!-- 2016 -->
+                        <GridLayout class="nt-drawer__list-item">
+                            <Label col="1" text="2016" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showJB16menu" columns="50,*">
+                            <Label col="1" text="Cup Semi-Final" class="p-r-10" (tap)="onNavItemTap('/photos/2016/JuniorB/CupSemiFinal', '')"></Label>
+                        </StackLayout>
+                        <!-- 2018 -->
+                        <GridLayout class="nt-drawer__list-item">
+                            <Label col="1" text="2018" class="p-r-10" (tap)="onNavItemTap('/photos/2018/JuniorB', '')"></Label>
+                        </GridLayout>
+                    </StackLayout>
+                    <!-- End of Junior B -->
+
+                    <!-- Schoolboys -->
+                    <GridLayout class="nt-drawer__list-item" (tap)="showSBGalleryMenu = !showSBGalleryMenu">
+                        <Label col="2" text="Schoolboys" class="p-r-10"></Label>
                     </GridLayout>
-                    <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/academy/registration', '')">
-                        <Label col="2" text="U16" class="p-r-10"></Label>
-                    </GridLayout>
+                    <StackLayout *ngIf="showSBGalleryMenu" columns="50,*">
+                        <!-- 2009 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showSB09Menu = !showSB09Menu">
+                            <Label col="2" text="2009" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showSB09Menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="showSBU11Menu = !showSBU11Menu">
+                                <Label col="2" text="U11" class="p-r-10"></Label>
+                            </GridLayout>
+                            <StackLayout *ngIf="showSBU11Menu" columns="50,*">
+                                <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2009/U11/League', '')">
+                                    <Label col="2" text="League" class="p-r-10"></Label>
+                                </GridLayout>
+                                <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2009/U11/CupFinal', '')">
+                                    <Label col="2" text="Cup Final" class="p-r-10"></Label>
+                                </GridLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <!-- 2010 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showSB10Menu = !showSB10Menu">
+                            <Label col="2" text="2010" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showSB10Menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2010/U12', '')">
+                                <Label col="2" text="U12" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2015 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showSB15Menu = !showSB15Menu">
+                            <Label col="2" text="2015" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showSB15Menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2015/U8', '')">
+                                <Label col="2" text="U8" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2015/U14', '')">
+                                <Label col="2" text="U14" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2015/U16', '')">
+                                <Label col="2" text="U16" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2016 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showSB16Menu = !showSB16Menu">
+                            <Label col="2" text="2016" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showSB16Menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/U12', '')">
+                                <Label col="2" text="U12" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2016/U16', '')">
+                                <Label col="2" text="U16" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        <!-- 2018 -->
+                        <GridLayout class="nt-drawer__list-item" (tap)="showSB18Menu = !showSB18Menu">
+                            <Label col="2" text="2018" class="p-r-10"></Label>
+                        </GridLayout>
+                        <StackLayout *ngIf="showSB18Menu" columns="50,*">
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2018/U13', '')">
+                                <Label col="2" text="U13" class="p-r-10"></Label>
+                            </GridLayout>
+                            <GridLayout class="nt-drawer__list-item" (tap)="onNavItemTap('/photos/2018/U14', '')">
+                                <Label col="2" text="U14" class="p-r-10"></Label>
+                            </GridLayout>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                    <!-- End of Schoolboys  -->
+
                 </StackLayout>
                 <!-- End of Gallery Meny -->
 

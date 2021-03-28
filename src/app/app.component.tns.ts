@@ -27,7 +27,21 @@ export class AppComponent implements OnInit {
   public showGalleryMenu: boolean = false;
   public showAcademy2007menu: boolean = false;
   public showAcademyGalleryMenu: boolean = false;
-  public showAcademy2008menu: boolean = false;
+  public showAcademy09menu: boolean = false;
+  public showAcademy16menu: boolean = false;
+  public showAcademy17menu: boolean = false;
+  public showAcademy18menu: boolean = false;
+  public showJAGalleryMenu: boolean = false;
+  public showJBGalleryMenu: boolean = false;
+  public showJB16menu: boolean = false;
+  public showJB18menu: boolean = false;
+  public showSBGalleryMenu: boolean = false;
+  public showSB09Menu: boolean = false;
+  public showSBU11Menu: boolean = false;
+  public showSB10Menu: boolean = false;
+  public showSB15Menu: boolean = false;
+  public showSB16Menu: boolean = false;
+  public showSB18Menu: boolean = false;
   public teams: Team[];
   faCoffee = faCoffee;
 
@@ -62,8 +76,23 @@ export class AppComponent implements OnInit {
   onNavItemTap( path: string, team: string ) {
     console.log("Clicked on: " + path );
     this.show = this.showAcademyMenu = this.showGalleryMenu = this.showAcademyGalleryMenu = false;
-    this.showAcademy2007menu = this.showAcademy2008menu = false;
+    this.showAcademy2007menu = this.showAcademy09menu = false;
+    this.showAcademy16menu = false;
+    this.showAcademy17menu = false;
+    this.showAcademy18menu = false;
+    this.showJAGalleryMenu = false;
+    this.showJBGalleryMenu = false;
+    this.showJB16menu = false;
+    this.showJB18menu = false;
+    this.showSBU11Menu = false;
+    this.showSBGalleryMenu = false;
+    this.showSB09Menu = false;
+    this.showSB10Menu = false;
+    this.showSB15Menu = false;
+    this.showSB16Menu = false;
+    this.showSB18Menu = false;
     this.d$.dsCurrentTeam.name = team;
+
     
     this.router.navigateByUrl(path);
     this.closeDrawer();
