@@ -293,7 +293,7 @@ export class SessionDataService {
                        {'id':2, 'name': "Youths", 'lrcode':0, 'lrFixturesCode':0, 'lrResultsCode':0, 'noticeboard':"No info"},
                      ];
         // FOR TESTING ONLY
-        url = "https://6nmr0px3y2.execute-api.eu-west-1.amazonaws.com/";
+        // url = "https://6nmr0px3y2.execute-api.eu-west-1.amazonaws.com/";
         /////////////////
         this.lg$.log("===>>> Hitting endpoing: " + url + 'backend/public/teams');
         

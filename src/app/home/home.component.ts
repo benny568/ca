@@ -38,9 +38,9 @@ export class HomeComponent {
         this.lg$.trace("No permission cookie detected, asking for permission.");
         this.dialogRef = this.dialog.open(CookieConsentComponent);
         this.dialogRef.afterClosed().subscribe(result => {
-          this.lg$.trace('The dialog was closed with result: ' + result);
-          this.d$.dsCookiesUserChoice = result;
-          this.cookie$.savePermissionCookie();
+        this.lg$.trace('The dialog was closed with result: ' + result);
+        this.d$.dsCookiesUserChoice = result;
+        this.cookie$.savePermissionCookie();
         });
         break;
       case ReturnStatus.OK:

@@ -4,6 +4,7 @@ import { NativeScriptModule } from '@nativescript/angular';
 import { NativeScriptHttpClientModule } from '@nativescript/angular';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from 'nativescript-ui-listview/angular';
+import { RadListViewComponent } from 'nativescript-ui-listview/angular';
 import { NativeScriptCommonModule as CommonModule } from '@nativescript/angular';
 
 import { AppRoutingModule } from '@src/app/app-routing.module';
@@ -41,6 +42,7 @@ import { CookieService } from '@src/app/services/cookie.service';
   ],
   exports: [],
   providers: [
+    RadListViewComponent,
     LoggerService,
     CommonService,
     SessionDataService,

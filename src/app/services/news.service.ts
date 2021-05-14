@@ -55,6 +55,7 @@ export class NewsService {
     	this.lg$.log('->' + 'setNews()...recieved news stories');
         this.NewsStories = data;
         this.currentStory = this.NewsStories[0];
+        this.printStoryInfo();
         this.lg$.log('<- setNews(): set current story to: ' + this.currentStory.title);
     }
 
@@ -145,5 +146,20 @@ export class NewsService {
         this.lg$.log("<= createNews()");
         return news;
       }
+
+    public printStoryInfo()
+    {
+      this.lg$.log("==> printStoryInfo()");
+      
+      for( let i=0; i < this.NewsStories.length; i++ )
+      {
+        this.lg$.log("Story " + i + ":");
+        this.lg$.log("    Title:   " + this.NewsStories[i].title);
+        this.lg$.log("    Description:   " + this.NewsStories[i].description);
+        this.lg$.log("    Story:   " + this.NewsStories[i].story);
+        this.lg$.log("    Image:   " + this.NewsStories[i].image);
+      }
+        
+    }
 
 }
