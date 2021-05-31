@@ -1,6 +1,6 @@
 <ListView [items] = "news$.NewsStories" class="clubDefaultPage list-group" marginRight="-2" (itemTap)="onItemTap($event)">
     <ng-template tkListItemTemplate let-item="item">
-        <StackLayout horzontalAlignment="center" class="list-group-item">
+        <StackLayout horzontalAlignment="center" class="list-group-item -separator">
 
             <Label text="{{ item.title }}" class="news-source" textWrap="true"></Label>
             <Image src="{{serverUrl}}{{ item.image }}" class="news-image"></Image>          

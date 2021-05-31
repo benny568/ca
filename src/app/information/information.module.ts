@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
 import { CommonModule } from '@src/app/common-module/index';
+import { NativeScriptFormsModule } from '@nativescript/angular';
 
 import { InformationRoutingModule } from '@src/app/information/information-routing.module';
 import { InformationComponent } from '@src/app/information/information.component';
@@ -14,6 +15,7 @@ import { ContactUsComponent } from '@src/app/information/contact-us/contact-us.c
 @NgModule({
     imports: [
         CommonModule,
+        NativeScriptFormsModule,
         InformationRoutingModule
     ],
     declarations: [

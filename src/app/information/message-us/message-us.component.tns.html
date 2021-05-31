@@ -1,3 +1,29 @@
-<StackLayout>
-    <Label text="THIS IS THE Message Us PAGE !!!!!!!!!!"></Label>
+<StackLayout class="nt-form clubDefaultPage">
+
+    <StackLayout class="nt-input">
+        <Label text="Enter your email address here:" 
+               class="font-weight-bold m-b-5">
+        </Label>
+        <TextField [(ngModel)] = 'email' class="clubFgTextColour"></TextField>
+    </StackLayout>
+
+    <StackLayout class="nt-input">
+        <Label text="Enter the subject of your message here:" 
+               class="font-weight-bold m-b-5">
+        </Label>
+        <TextField [(ngModel)] = 'subject' class="clubFgTextColour"></TextField>
+    </StackLayout>   
+
+    <StackLayout class="nt-input">
+        <Label text="Enter your message here" 
+               class="font-weight-bold m-b-5">
+        </Label>
+        <TextView [(ngModel)] = 'message' class="clubFgTextColour"></TextView>
+    </StackLayout>
+
+    <Button class="-primary -rounded-lg" 
+            text="Send Message"
+            (tap)="sendEmail()">
+    </Button>
+
 </StackLayout>
